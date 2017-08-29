@@ -13,3 +13,8 @@
    git add * 
    git commit -m "add .svn path to git res"
    git push
+# add test file in git and check in to svn
+   vi test.md
+   git add test.md
+   git commit -m 'add test.md'
+   svn add test.md 
