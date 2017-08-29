@@ -24,3 +24,6 @@
    svn add * --force
    svn commit -m 'test add file' --username chenxl --password xuelin
    删除文件无法自动提交到svn中
+   
+# git-svn
+   
