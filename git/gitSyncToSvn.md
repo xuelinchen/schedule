@@ -17,4 +17,14 @@
    vi test.md
    git add test.md
    git commit -m 'add test.md'
+<<<<<<< HEAD
    svn add test.md 
+=======
+   svn add test.md 
+   svn commit -m 'check in file from git'  --username chenxl --password xuelin
+   git commit -m 'delete test.md'
+   git pull
+   svn add * --force
+   svn commit -m 'test add file' --username chenxl --password xuelin
+   删除文件无法自动提交到svn中
+>>>>>>> 831924f82a90bb761a00053a7a219ca6c11deead
