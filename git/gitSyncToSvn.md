@@ -26,4 +26,14 @@
    删除文件无法自动提交到svn中
    
 # git-svn
-   
+   echo xuelin|git svn clone svn://192.168.1.66/namtso/branch/web_code/tp5-project -r 29318 --username chenxl
+   git branch
+   git remote add origin git@gitlib28:chenxuelin/schedule.git
+   git pull origin master ctrl+x提交
+   git branch --set-upstream-to=origin/master
+   强制刷新本地版本为远程仓库
+   git fetch --all
+   git reset --hard origin/master 
+   # Append svn:ignore settings to the default Git exclude file:
+   git svn show-ignore >> .git/info/exclude
+   git svn dcommit
