@@ -37,4 +37,6 @@
    # Append svn:ignore settings to the default Git exclude file:
    git svn show-ignore >> .git/info/exclude
    git svn dcommit
+   
+# from git commit to svn
   
