@@ -39,4 +39,3 @@
    git svn dcommit
    
 # from git commit to svn
-  
