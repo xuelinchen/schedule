@@ -39,3 +39,62 @@
    git svn dcommit
    
 # from git commit to svn
+   1、create new clone project
+   git clone git@gitlib28:chenxuelin/schedule
+   cd schedule
+   2、create new svn clone project
+   echo xuelin|git svn clone svn://192.168.1.66/namtso/branch/web_code/tp5 -r29318:HEAD --username chenxl
+   cd tp5
+   git remote add origin git@gitlib28:chenxuelin/schedule.git
+
+# git version commit to svn
+   http://blog.csdn.net/zhangskd/article/details/43452627
+   1. git clone git@gitlib28:chenxuelin/schedule
+   2. git svn init svn://192.168.1.66/namtso/branch/web_code/tp5 
+   3. git svn fetch
+   4. git show-ref svn | tail -n 1
+       f7e97acecbb8098757d9dc451b3c76eb59c4da9d refs/remotes/origin/master
+   5. git log --pretty=oneline master | tail -n 1 
+       8041fab27f1ff38f980b9ea00fd335c50005af8c nf:  create svntest project
+   6. echo "8041fab27f1ff38f980b9ea00fd335c50005af8c 5194b04324e1fa8bcec215ec053c5e707d2e4b83" >> .git/info/grafts
+   试验失败
+   
+# another
+   1、echo xuelin|git svn clone svn://192.168.1.66/namtso/branch/web_code/tp5 -r29318:HEAD --username chenxl
+   2、git remote add origin git@gitlib28:chenxuelin/schedule.git
+   3、git branch --set-upstream-to=origin/master master
+   4、git pull origin 
+   5、git svn dcommit
+   6、git checkout -b newfeature
+   7、git checkout master
+   8、git merge newfeature
+   9、git push origin
+   10、git svn dcommit
+   
+ # schedule project
+ 
+    1. install git-svn
+       apt install git-svn
+    2. clone svn project,that is empty project
+       echo xuelin|git svn clone svn://192.168.1.66/namtso/branch/web_code/schedule -r29318:HEAD --username chenxl
+    3. update from svn
+       git svn rebase
+    4. find all branch
+       git branch -a
+    5. add remote git repository
+       git remote add origin git@gitlab28:chenxuelin/schedule.git    
+    6. set master branch upstream
+       git branch --set-upstream-to=origin/master master
+    7. pull data from remote git
+       git pull origin ==》ctrl+x
+    8. submit to svn
+       git svn dcommit
+    9. develope in branch 
+       git checkout -b "cxl"   
+       git rm test.md
+       git commit -m "made some change"
+    10.return to master for push to remote of git&svn
+       git checkout master
+       git merge cxl
+       git push origin master
+       git svn dcommit
