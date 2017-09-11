@@ -98,3 +98,43 @@
        git merge cxl
        git push origin master
        git svn dcommit
+    11.add ignore from git to svn
+       git svn show-ignore >> .git/info/exclude
+       
+# tp5 project
+      
+    1. clone svn project,that is empty project
+       echo xuelin|git svn clone svn://192.168.1.66/namtso/branch/web_code/spi -r29318:HEAD --username chenxl
+    2. cd spi
+    3. add remote git repository
+       git remote add origin git@gitlab28:websrc/spi.git
+    4. make some change
+    5. git add .
+    6. git commit -m 'add ignore'
+    7. submit to remote git
+    		git push -u origin master
+    8. submit to svn
+       git svn dcommit
+
+# spi project
+    1. clone svn project spi-front  
+    		echo xuelin|git svn clone svn://192.168.1.66/EmicallDev/ApplicationPlatform/sandbox/WebApplication/spi-front -r3000:HEAD --username chenxl 
+    2. clone svn project spi-php
+    		echo xuelin|git svn clone svn://192.168.1.66/EmicallDev/ApplicationPlatform/sandbox/WebApplication/spi-php -r3000:HEAD --username chenxl
+    3. cd spi-php
+    4. add remote git repository
+       git remote add origin git@gitlab28:websrc/spi.git
+    5. view remote info
+       git remote -v
+    6. pull data from remote git
+    		git pull origin
+    7. git branch -a
+       * master
+       		remotes/git-svn
+       		remotes/origin/master
+    8. merge origin/master to local branch master
+    		git merge remotes/origin/master ==》ctrl+x
+    9. add ignore from git to svn
+       git svn show-ignore >> .git/info/exclude
+    10.create branch of "bin" 
+       git checkout -b "bin"
