@@ -138,3 +138,14 @@
        git svn show-ignore >> .git/info/exclude
     10.create branch of "bin" 
        git checkout -b "bin"
+    11.commit data to svn
+    		git svn dcommit
+    12.cd spi-front
+    13.add remote git repository
+    		git remote add origin git@gitlab28:websrc/vuefront.git
+    14.pull data from remote git
+    		git pull origin master => ctrl+x
+    15.add ignore from git to svn
+    		git svn show-ignore >> .git/info/exclude
+    16.commit data to svn
+    		git svn dcommit
