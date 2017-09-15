@@ -14,3 +14,4 @@
 	1. cnpm install -g vue-cli
 	2. vue init webpack my-project
 	3. cnpm install
+
