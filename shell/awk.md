@@ -54,3 +54,6 @@
 		eval $(cat test.txt |sed "s#//# #g" | sed "s/=/ /g" | awk  '{if(NF>1){printf("%s=\"%s\";",$1,$2)}}')
 		echo $DB_PWD
 		123456
+	4、分析url
+		param=`echo "$redirectUrl" | awk -F '?' '{print $2}'`;
+		echo "$param" | awk -F '&' '{i=1;while(i<=NF){n=split($i,array,"=");if(array[1]=="code"){print array[2];break;};i++;}}'

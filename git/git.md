@@ -41,3 +41,8 @@
 	'git help -a' and 'git help -g' list available subcommands and some
 	concept guides. See 'git help <command>' or 'git help <concept>'
 	to read about a specific subcommand or concept.
+	
+# example
+	1. 使用远程覆盖本地
+		git fetch --all
+		git reset --hard origin/master
