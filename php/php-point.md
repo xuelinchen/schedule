@@ -13,7 +13,7 @@
 	如果要检查某个字符串是否满足多少长度，可以考虑用这种大括号（花括号）加 isset 的方式替代 strlen 函数，因为 isset 是语言结构，strlen 是函数，所以使用 isset 比使用 strlen 效率更高。
 	比如判断一个字符串的长度是否小于 5：
 	if ( !isset ( $str{5} ) ) 就比 if ( strlen ( $str ) < 5 ) 好。
-	
+
 # call_user_func & call_user_func_array
 	* 区别 调用方式不同
 		call_user_func(array($class,$method),param1,param2);
