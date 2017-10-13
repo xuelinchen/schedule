@@ -53,3 +53,12 @@
 	4、-g表示所有匹配的都执行
 		echo "this 1234 success 1234" | sed -r "s/[0-9]+/is/g"
 		this is success is
+	5、按行号删除文件内容
+		sed -i '1,50000d' "$cxl_log_file" # 删除50000万行
+		sed -i '1d' a.txt删首行
+		sed -i '$d' b.txt删尾行
+		sed -i 's/[ ]*//g' c.txt删空格
+		sed -i '/^$/d' d.txt删空行
+		sed -i ‘/^[0-9]*$/d' a.txt删包含数字的行
+		sed -i ‘1,2d’a.txt删2行
+		sed -i ‘/love/d’ a.txt删包含string的行
