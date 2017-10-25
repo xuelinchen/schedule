@@ -57,3 +57,6 @@
 	4、分析url
 		param=`echo "$redirectUrl" | awk -F '?' '{print $2}'`;
 		echo "$param" | awk -F '&' '{i=1;while(i<=NF){n=split($i,array,"=");if(array[1]=="code"){print array[2];break;};i++;}}'
+	5、分析php配置文件，找出session节host配置项
+		awk -F '=>' '{if($0~/\047session\047/){find=1;fl=0;fr=0}if(find){if($0~/\[/){fl++;};if($0~/\]/){fr++;};if($1~/\047host\047/){print $2;exit 0;}if(fl==fr){exit 99}}}' ../application/config.php | awk -F '\047' '{print $2,exit 0}'
+		'127.0.0.1',

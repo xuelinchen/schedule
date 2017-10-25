@@ -62,3 +62,5 @@
 		sed -i ‘/^[0-9]*$/d' a.txt删包含数字的行
 		sed -i ‘1,2d’a.txt删2行
 		sed -i ‘/love/d’ a.txt删包含string的行
+	6、修改制定行内容
+		sed -r  's/( *'host' *).*/\1"test"/'  ../application/config.php 
