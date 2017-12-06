@@ -12,3 +12,6 @@
 ## use mysql;update user set password=PASSWORD("C1oudP8x&2017") where user="root";
 ## flush privileges;
 ## select Host,User,Password,authentication_string from user;
+
+# insert into ... on duplicate key update ...
+## INSERT INTO table (a,b,c) VALUES (1,2,3) ON DUPLICATE KEY UPDATE c=c+1 UPDATE table SET c=c+1 WHERE a=1;

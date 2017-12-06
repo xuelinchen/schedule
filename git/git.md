@@ -46,3 +46,25 @@
 	1. 使用远程覆盖本地
 		git fetch --all
 		git reset --hard origin/master
+	2. fatal: Pathspec 'shell-baselib/cxl_cli' is in submodule 'shell-baselib
+		git rm --cached shell-baselib/
+		git add shell-baselib/
+	3.	merge其他分支（或远程分支），有冲突是使用远程覆盖本地
+		git svn clone svn://192.168.1.66/namtso/branch/web_code/svntest/front -r31772:HEAD
+		git remote add origin git@gitlab28:chenxuelin/spifront 
+		git fetch origin master
+		git merge -m "merge from git" -X theirs origin/master
+		echo xuelin|git svn clone "svn://192.168.1.66/EmicallDev/ApplicationPlatform/sandbox/WebApplication/spi-front" -r3995:HEAD --username chenxl 
+		git remote add origin git@gitlab28:websrc/vuefront
+		
+		 git svn clone svn://192.168.1.66/namtso/branch/web_code/svntest/front -r31772:HEAD
+		 git remote add origin git@gitlab28:chenxuelin/spifront
+		 git fetch origin master
+		 git reset --hard origin/master
+	
+	 git merge -X theirs -m "merge from git when confict use theirs" origin master
+	 sed -i '/^dist\//d' .gitignore 
+	 npm config set registry " https://registry.npm.taobao.org " 
+	 svn info svn://192.168.1.66/EmicallDev/ApplicationPlatform/sandbox/WebApplication/spi-front | awk '($1=="Last"){if($3=="Rev:"){print $4}}'
+	 
+		
