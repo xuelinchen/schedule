@@ -1,0 +1,861 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.2. apt &mdash; cxl schedule 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cxl schedule 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="2. LINUX" href="index.html"/>
+        <link rel="next" title="2.3. shell" href="shell.html"/>
+        <link rel="prev" title="2.1. point" href="point.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cxl schedule
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. introduce</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. LINUX</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="point.html">2.1. point</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.2. apt</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#refer">2.2.1. refer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-example">2.2.2. command example</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#base-method">2.2.2.1. base method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-remove-nginx">2.2.2.2. install&amp;remove Nginx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-remove-mysql">2.2.2.3. install&amp;remove mysql</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-remove-redis">2.2.2.4. install&amp;remove redis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-remove-apache">2.2.2.5. install&amp;remove apache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-remove-php">2.2.2.6. install&amp;remove php</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-remove-other">2.2.2.7. install&amp;remove other</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">2.3. shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="virtualbox.html">2.4. virtualbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supervisor.html">2.5. supervisor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../program/index.html">3. PROGRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">4. PROJECT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versionCtrl/index.html">5. VERSION CONTROL</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cxl schedule</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">2. LINUX</a> &raquo;</li>
+        
+      <li>2.2. apt</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/linux/apt.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="apt">
+<h1>2.2. apt<a class="headerlink" href="#apt" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="refer">
+<h2>2.2.1. refer<a class="headerlink" href="#refer" title="Permalink to this headline">¶</a></h2>
+<p>none refer</p>
+</div>
+<div class="section" id="command-example">
+<h2>2.2.2. command example<a class="headerlink" href="#command-example" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-method">
+<h3>2.2.2.1. base method<a class="headerlink" href="#base-method" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install package</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ apt install package_name  -y
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove package</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ apt autoremove --purge package_name -y
+$ apt remove --purge package_name -y
+</pre></div>
+</div>
+</li>
+<li><p class="first">check package</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>$ dpkg -l | grep package_name
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="install-remove-nginx">
+<h3>2.2.2.2. install&amp;remove Nginx<a class="headerlink" href="#install-remove-nginx" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install nginx</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">nginx</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*nginx*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logrotate</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc1</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc5</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">nginx</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc3</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ufw</span><span class="o">/</span><span class="n">applications</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc0</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">multi</span><span class="o">-</span><span class="n">user</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">wants</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">service</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc4</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02nginx</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc6</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01nginx</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*nginx*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">nginx</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">nginx</span><span class="o">-</span><span class="n">core</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nginx</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">registry</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">yaml</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">addons</span><span class="o">/</span><span class="n">indent</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">addons</span><span class="o">/</span><span class="n">syntax</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">addons</span><span class="o">/</span><span class="n">ftdetect</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">nginx</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">nginx</span><span class="o">-</span><span class="n">core</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apport</span><span class="o">/</span><span class="n">package</span><span class="o">-</span><span class="n">hooks</span><span class="o">/</span><span class="n">source_nginx</span><span class="o">.</span><span class="n">py</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*nginx*&quot;</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">nginx</span><span class="o">.</span><span class="n">service</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">nginx</span>
+    <span class="n">ii</span>  <span class="n">nginx</span>           <span class="mf">1.10</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">2</span>     <span class="nb">all</span>          <span class="n">small</span><span class="p">,</span> <span class="n">powerful</span><span class="p">,</span> <span class="n">scalable</span> <span class="n">web</span><span class="o">/</span><span class="n">proxy</span> <span class="n">server</span>
+    <span class="n">ii</span>  <span class="n">nginx</span><span class="o">-</span><span class="n">common</span>    <span class="mf">1.10</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">2</span>     <span class="nb">all</span>          <span class="n">small</span><span class="p">,</span> <span class="n">powerful</span><span class="p">,</span> <span class="n">scalable</span> <span class="n">web</span><span class="o">/</span><span class="n">proxy</span> <span class="n">server</span> <span class="o">-</span> <span class="n">common</span> <span class="n">files</span>
+    <span class="n">ii</span>  <span class="n">nginx</span><span class="o">-</span><span class="n">core</span>      <span class="mf">1.10</span><span class="o">.</span><span class="mi">3</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">2</span>     <span class="n">amd64</span>        <span class="n">nginx</span> <span class="n">web</span><span class="o">/</span><span class="n">proxy</span> <span class="n">server</span> <span class="p">(</span><span class="n">core</span> <span class="n">version</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove nginx</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">autoremove</span> <span class="o">--</span><span class="n">purge</span> <span class="n">nginx</span><span class="o">-</span><span class="n">common</span> <span class="o">-</span><span class="n">y</span> <span class="n">直接删除nginx</span><span class="o">-</span><span class="n">common</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p>会自动卸载依赖nginx及配置文件，执行以上命令都为空</p>
+</div></blockquote>
+</div>
+<div class="section" id="install-remove-mysql">
+<h3>2.2.2.3. install&amp;remove mysql<a class="headerlink" href="#install-remove-mysql" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install mysql</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">-</span><span class="n">server</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*mysql*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logrotate</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logcheck</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">server</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mi">5</span><span class="n">_7</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logcheck</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">workstation</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mi">5</span><span class="n">_7</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logcheck</span><span class="o">/</span><span class="n">ignore</span><span class="o">.</span><span class="n">d</span><span class="o">.</span><span class="n">paranoid</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mi">5</span><span class="n">_7</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc1</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K02mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc5</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc3</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc0</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K02mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apparmor</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">usr</span><span class="o">.</span><span class="n">sbin</span><span class="o">.</span><span class="n">mysqld</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apparmor</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">local</span><span class="o">/</span><span class="n">usr</span><span class="o">.</span><span class="n">sbin</span><span class="o">.</span><span class="n">mysqld</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">multi</span><span class="o">-</span><span class="n">user</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">wants</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">service</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">cnf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysqldump</span><span class="o">.</span><span class="n">cnf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">cnf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysqld_safe_syslog</span><span class="o">.</span><span class="n">cnf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">mysqld</span><span class="o">.</span><span class="n">cnf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc4</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02mysql</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc6</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K02mysql</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*mysql*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mysql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">plugin</span><span class="o">/</span><span class="n">mysql_no_login</span><span class="o">.</span><span class="n">so</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">mysqld</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_upgrade</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_embedded</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlpump</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqldumpslow</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_secure_installation</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqladmin</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_config_editor</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlcheck</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqld_multi</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqldump</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqloptimize</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_tzinfo_to_sql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlshow</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlimport</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlrepair</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_plugin</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlslap</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlreport</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqld_safe</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlanalyze</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysqlbinlog</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_install_db</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">mysql_ssl_rsa_setup</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">5.7</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">5.7</span><span class="o">/</span><span class="n">mysqld</span><span class="o">.</span><span class="n">sym</span><span class="o">.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mf">5.7</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="mf">5.7</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">icscf</span><span class="o">/</span><span class="n">icscf</span><span class="o">.</span><span class="n">mysql</span><span class="o">.</span><span class="n">sql</span><span class="o">.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">acc</span><span class="o">-</span><span class="n">mysql</span><span class="o">.</span><span class="n">cfg</span><span class="o">.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mf">5.7</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">syntax</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">log</span><span class="o">-</span><span class="n">rotate</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql_security_commands</span><span class="o">.</span><span class="n">sql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql_sys_schema</span><span class="o">.</span><span class="n">sql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql_test_data_timezone</span><span class="o">.</span><span class="n">sql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">systemd</span><span class="o">-</span><span class="n">start</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysqld_multi</span><span class="o">.</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql_system_tables</span><span class="o">.</span><span class="n">sql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">mysql_system_tables_data</span><span class="o">.</span><span class="n">sql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">5.7</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="mf">5.7</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqldumpslow</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqloptimize</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlpump</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlshow</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_upgrade</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_config_editor</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlbinlog</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqld_safe</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlrepair</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqldump</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlanalyze</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlslap</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqld_multi</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_secure_installation</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlreport</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlimport</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlcheck</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_plugin</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqladmin</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_embedded</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_install_db</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_ssl_rsa_setup</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysqlman</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">mysql_tzinfo_to_sql</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man8</span><span class="o">/</span><span class="n">mysqld</span><span class="o">.</span><span class="mf">8.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">sosreport</span><span class="o">/</span><span class="n">sos</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">sosreport</span><span class="o">/</span><span class="n">sos</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">__pycache__</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mf">35.</span><span class="n">pyc</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apport</span><span class="o">/</span><span class="n">package</span><span class="o">-</span><span class="n">hooks</span><span class="o">/</span><span class="n">source_mysql</span><span class="o">-</span><span class="mf">5.7</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bash</span><span class="o">-</span><span class="n">completion</span><span class="o">/</span><span class="n">completions</span><span class="o">/</span><span class="n">mysqladmin</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bash</span><span class="o">-</span><span class="n">completion</span><span class="o">/</span><span class="n">completions</span><span class="o">/</span><span class="n">mysql</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mysql</span><span class="o">-</span><span class="n">common</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*mysql*&quot;</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">mysql</span><span class="o">.</span><span class="n">service</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mysql</span>
+    <span class="n">ii</span>  <span class="n">mysql</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="mf">5.7</span>                   <span class="mf">5.7</span><span class="o">.</span><span class="mi">19</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">MySQL</span> <span class="n">database</span> <span class="n">client</span> <span class="n">binaries</span>
+    <span class="n">ii</span>  <span class="n">mysql</span><span class="o">-</span><span class="n">client</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mf">5.7</span>              <span class="mf">5.7</span><span class="o">.</span><span class="mi">19</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">MySQL</span> <span class="n">database</span> <span class="n">core</span> <span class="n">client</span> <span class="n">binaries</span>
+    <span class="n">ii</span>  <span class="n">mysql</span><span class="o">-</span><span class="n">common</span>                       <span class="mf">5.7</span><span class="o">.</span><span class="mi">19</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="nb">all</span>          <span class="n">MySQL</span> <span class="n">database</span> <span class="n">common</span> <span class="n">files</span><span class="p">,</span> <span class="n">e</span><span class="o">.</span><span class="n">g</span><span class="o">.</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">mysql</span><span class="o">/</span><span class="n">my</span><span class="o">.</span><span class="n">cnf</span>
+    <span class="n">ii</span>  <span class="n">mysql</span><span class="o">-</span><span class="n">server</span>                       <span class="mf">5.7</span><span class="o">.</span><span class="mi">19</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="nb">all</span>          <span class="n">MySQL</span> <span class="n">database</span> <span class="n">server</span> <span class="p">(</span><span class="n">metapackage</span> <span class="n">depending</span> <span class="n">on</span> <span class="n">the</span> <span class="n">latest</span> <span class="n">version</span><span class="p">)</span>
+    <span class="n">ii</span>  <span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="mf">5.7</span>                   <span class="mf">5.7</span><span class="o">.</span><span class="mi">19</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">MySQL</span> <span class="n">database</span> <span class="n">server</span> <span class="n">binaries</span> <span class="ow">and</span> <span class="n">system</span> <span class="n">database</span> <span class="n">setup</span>
+    <span class="n">ii</span>  <span class="n">mysql</span><span class="o">-</span><span class="n">server</span><span class="o">-</span><span class="n">core</span><span class="o">-</span><span class="mf">5.7</span>              <span class="mf">5.7</span><span class="o">.</span><span class="mi">19</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">MySQL</span> <span class="n">database</span> <span class="n">server</span> <span class="n">binaries</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove mysql</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>apt autoremove --purge mysql-common -y
+find /etc -name &quot;*mysql*&quot;
+    /etc/mysql
+find /usr -name &quot;*mysql*&quot;
+    /usr/share/doc/kamailio/examples/icscf/icscf.mysql.sql.gz
+    /usr/share/doc/kamailio/examples/kamailio/acc-mysql.cfg.gz
+    /usr/share/vim/vim74/syntax/mysql.vim
+    /usr/share/sosreport/sos/plugins/mysql.py
+    /usr/share/sosreport/sos/plugins/__pycache__/mysql.cpython-35.pyc
+    /usr/share/bash-completion/completions/mysqladmin
+    /usr/share/bash-completion/completions/mysql
+这个配置目录没有删除，手动删除
+rm /etc/mysql -rf
+rm /var/lib/mysql -rf
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="install-remove-redis">
+<h3>2.2.2.4. install&amp;remove redis<a class="headerlink" href="#install-remove-redis" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install redis</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*redis*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logrotate</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc1</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc5</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redis</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">pre</span><span class="o">-</span><span class="n">up</span><span class="o">.</span><span class="n">d</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">post</span><span class="o">-</span><span class="n">down</span><span class="o">.</span><span class="n">d</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">post</span><span class="o">-</span><span class="n">up</span><span class="o">.</span><span class="n">d</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">pre</span><span class="o">-</span><span class="n">down</span><span class="o">.</span><span class="n">d</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc3</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc0</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">multi</span><span class="o">-</span><span class="n">user</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">wants</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">service</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">service</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc4</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc6</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01redis</span><span class="o">-</span><span class="n">server</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*redis*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tmpfiles</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">check</span><span class="o">-</span><span class="n">dump</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">benchmark</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">check</span><span class="o">-</span><span class="n">aof</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">tools</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">tools</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">trib</span><span class="o">.</span><span class="n">rb</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">benchmark</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bash</span><span class="o">-</span><span class="n">completion</span><span class="o">/</span><span class="n">completions</span><span class="o">/</span><span class="n">bash_completion</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*redis*&quot;</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="n">server</span><span class="o">.</span><span class="n">service</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">redis</span>
+    <span class="n">ii</span>  <span class="n">redis</span><span class="o">-</span><span class="n">server</span>  <span class="mi">2</span><span class="p">:</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="mi">1</span>      <span class="n">amd64</span>        <span class="n">Persistent</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span> <span class="n">database</span> <span class="k">with</span> <span class="n">network</span> <span class="n">interface</span>
+    <span class="n">ii</span>  <span class="n">redis</span><span class="o">-</span><span class="n">tools</span>   <span class="mi">2</span><span class="p">:</span><span class="mf">3.0</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="mi">1</span>      <span class="n">amd64</span>        <span class="n">Persistent</span> <span class="n">key</span><span class="o">-</span><span class="n">value</span> <span class="n">database</span> <span class="k">with</span> <span class="n">network</span> <span class="n">interface</span> <span class="p">(</span><span class="n">client</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove redis</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">所有内容都返回空</span>
+<span class="n">apt</span> <span class="n">autoremove</span> <span class="o">--</span><span class="n">purge</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span> <span class="o">-</span><span class="n">y</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="install-remove-apache">
+<h3>2.2.2.5. install&amp;remove apache<a class="headerlink" href="#install-remove-apache" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install apache</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">apache2</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*apache*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logrotate</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc1</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc1</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc5</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc5</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc3</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc3</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ufw</span><span class="o">/</span><span class="n">applications</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">ufw</span><span class="o">/</span><span class="n">applications</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="n">utils</span><span class="o">.</span><span class="n">ufw</span><span class="o">.</span><span class="n">profile</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc0</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc0</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">default</span><span class="o">/</span><span class="n">apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">cron</span><span class="o">.</span><span class="n">daily</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc4</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc4</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S02apache2</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc6</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache</span><span class="o">-</span><span class="n">htcacheclean</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc6</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01apache2</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*apache*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">apachectl</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">apache2ctl</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="nb">bin</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="n">monit</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="n">data</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="n">utils</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="n">maintscript</span><span class="o">-</span><span class="n">helper</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">icons</span><span class="o">/</span><span class="n">apache_pb</span><span class="o">.</span><span class="n">png</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">icons</span><span class="o">/</span><span class="n">apache_pb</span><span class="o">.</span><span class="n">gif</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">icons</span><span class="o">/</span><span class="n">apache_pb</span><span class="o">.</span><span class="n">svg</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">icons</span><span class="o">/</span><span class="n">apache_pb2</span><span class="o">.</span><span class="n">gif</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">icons</span><span class="o">/</span><span class="n">apache_pb2</span><span class="o">.</span><span class="n">png</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">syntax</span><span class="o">/</span><span class="n">apachestyle</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">syntax</span><span class="o">/</span><span class="n">apache</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="nb">bin</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="nb">bin</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">apache2</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="n">data</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man8</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="mf">8.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man8</span><span class="o">/</span><span class="n">apachectl</span><span class="o">.</span><span class="mf">8.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man8</span><span class="o">/</span><span class="n">apache2ctl</span><span class="o">.</span><span class="mf">8.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">sosreport</span><span class="o">/</span><span class="n">sos</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">__pycache__</span><span class="o">/</span><span class="n">apache</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mf">35.</span><span class="n">pyc</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">sosreport</span><span class="o">/</span><span class="n">sos</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span><span class="n">apache</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">apport</span><span class="o">/</span><span class="n">package</span><span class="o">-</span><span class="n">hooks</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="n">py</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bash</span><span class="o">-</span><span class="n">completion</span><span class="o">/</span><span class="n">completions</span><span class="o">/</span><span class="n">apache2ctl</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*apache*&quot;</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">d</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">apache2</span><span class="o">.</span><span class="n">service</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">apache2</span><span class="o">-</span><span class="n">systemd</span><span class="o">.</span><span class="n">conf</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">apache</span>
+    <span class="n">ii</span>  <span class="n">apache2</span>          <span class="mf">2.4</span><span class="o">.</span><span class="mi">18</span><span class="o">-</span><span class="mi">2</span><span class="n">ubuntu3</span><span class="o">.</span><span class="mi">4</span>    <span class="n">amd64</span>        <span class="n">Apache</span> <span class="n">HTTP</span> <span class="n">Server</span>
+    <span class="n">ii</span>  <span class="n">apache2</span><span class="o">-</span><span class="nb">bin</span>      <span class="mf">2.4</span><span class="o">.</span><span class="mi">18</span><span class="o">-</span><span class="mi">2</span><span class="n">ubuntu3</span><span class="o">.</span><span class="mi">4</span>    <span class="n">amd64</span>        <span class="n">Apache</span> <span class="n">HTTP</span> <span class="n">Server</span> <span class="p">(</span><span class="n">modules</span> <span class="ow">and</span> <span class="n">other</span> <span class="n">binary</span> <span class="n">files</span><span class="p">)</span>
+    <span class="n">ii</span>  <span class="n">apache2</span><span class="o">-</span><span class="n">data</span>     <span class="mf">2.4</span><span class="o">.</span><span class="mi">18</span><span class="o">-</span><span class="mi">2</span><span class="n">ubuntu3</span><span class="o">.</span><span class="mi">4</span>    <span class="nb">all</span>          <span class="n">Apache</span> <span class="n">HTTP</span> <span class="n">Server</span> <span class="p">(</span><span class="n">common</span> <span class="n">files</span><span class="p">)</span>
+    <span class="n">ii</span>  <span class="n">apache2</span><span class="o">-</span><span class="n">utils</span>    <span class="mf">2.4</span><span class="o">.</span><span class="mi">18</span><span class="o">-</span><span class="mi">2</span><span class="n">ubuntu3</span><span class="o">.</span><span class="mi">4</span>    <span class="n">amd64</span>        <span class="n">Apache</span> <span class="n">HTTP</span> <span class="n">Server</span> <span class="p">(</span><span class="n">utility</span> <span class="n">programs</span> <span class="k">for</span> <span class="n">web</span> <span class="n">servers</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove apache</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">autoremove</span> <span class="o">--</span><span class="n">purge</span> <span class="n">apache2</span> <span class="o">-</span><span class="n">y</span> <span class="n">满足需求</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="install-remove-php">
+<h3>2.2.2.6. install&amp;remove php<a class="headerlink" href="#install-remove-php" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install php</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">apache2</span> <span class="o">-</span><span class="n">y</span>                  <span class="n">安装apache2</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">mysql</span><span class="o">-</span><span class="n">server</span> <span class="o">-</span><span class="n">y</span>             <span class="n">安装mysql</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*php*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">logrotate</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc1</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc5</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">alternatives</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">alternatives</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc3</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">conf</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc2</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc0</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">fpm</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">fpm</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">fpm</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">cli</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apparmor</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">abstractions</span><span class="o">/</span><span class="n">php5</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">multi</span><span class="o">-</span><span class="n">user</span><span class="o">.</span><span class="n">target</span><span class="o">.</span><span class="n">wants</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">.</span><span class="n">service</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc4</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">S01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">cron</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">rc6</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">K01php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*php*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">tmpfiles</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">.</span><span class="n">conf</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">-</span><span class="n">reopenlogs</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">maintscript</span><span class="o">-</span><span class="n">helper</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">-</span><span class="n">checkconf</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">helper</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">ini</span><span class="o">-</span><span class="n">production</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">ini</span><span class="o">-</span><span class="n">production</span><span class="o">.</span><span class="n">cli</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">ini</span><span class="o">-</span><span class="n">development</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">phpenmod</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">phpdismod</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">phpquery</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">fpm7</span><span class="o">.</span><span class="mi">0</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">readline</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">json</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cli</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">web_im</span><span class="o">/</span><span class="n">click_to_dial</span><span class="o">.</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">web_im</span><span class="o">/</span><span class="n">send_im</span><span class="o">.</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">web_im</span><span class="o">/</span><span class="n">click_to_dial</span><span class="o">.</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">kamailio</span><span class="o">/</span><span class="n">web_im</span><span class="o">/</span><span class="n">send_im</span><span class="o">.</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">opcache</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">readline</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">autoload</span><span class="o">/</span><span class="n">phpcomplete</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">indent</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">syntax</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">ftplugin</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">vim</span><span class="o">/</span><span class="n">vim74</span><span class="o">/</span><span class="n">compiler</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">vim</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">json</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">nano</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="n">nanorc</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">readline</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">json</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cli</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">opcache</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">mime</span><span class="o">/</span><span class="n">application</span><span class="o">/</span><span class="n">x</span><span class="o">-</span><span class="n">php</span><span class="o">.</span><span class="n">xml</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">readline</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">json</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cli</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">opcache</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">common</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">php</span><span class="o">.</span><span class="mf">1.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man1</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mf">0.1</span><span class="o">.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">man</span><span class="o">/</span><span class="n">man8</span><span class="o">/</span><span class="n">php</span><span class="o">-</span><span class="n">fpm7</span><span class="o">.</span><span class="mf">0.8</span><span class="o">.</span><span class="n">gz</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">opcache</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*php*&quot;</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">92</span><span class="o">-</span><span class="n">generic</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">pci</span><span class="o">/</span><span class="n">hotplug</span><span class="o">/</span><span class="n">acpiphp_ibm</span><span class="o">.</span><span class="n">ko</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">91</span><span class="o">-</span><span class="n">generic</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">pci</span><span class="o">/</span><span class="n">hotplug</span><span class="o">/</span><span class="n">acpiphp_ibm</span><span class="o">.</span><span class="n">ko</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">93</span><span class="o">-</span><span class="n">generic</span><span class="o">/</span><span class="n">kernel</span><span class="o">/</span><span class="n">drivers</span><span class="o">/</span><span class="n">pci</span><span class="o">/</span><span class="n">hotplug</span><span class="o">/</span><span class="n">acpiphp_ibm</span><span class="o">.</span><span class="n">ko</span>
+    <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">systemd</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span><span class="o">.</span><span class="n">service</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">php</span>
+    <span class="n">ii</span>  <span class="n">php</span><span class="o">-</span><span class="n">common</span>                         <span class="mi">1</span><span class="p">:</span><span class="mi">35</span><span class="n">ubuntu6</span>                                <span class="nb">all</span>          <span class="n">Common</span> <span class="n">files</span> <span class="k">for</span> <span class="n">PHP</span> <span class="n">packages</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span>                             <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="nb">all</span>          <span class="n">server</span><span class="o">-</span><span class="n">side</span><span class="p">,</span> <span class="n">HTML</span><span class="o">-</span><span class="n">embedded</span> <span class="n">scripting</span> <span class="n">language</span> <span class="p">(</span><span class="n">metapackage</span><span class="p">)</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">cli</span>                         <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">command</span><span class="o">-</span><span class="n">line</span> <span class="n">interpreter</span> <span class="k">for</span> <span class="n">the</span> <span class="n">PHP</span> <span class="n">scripting</span> <span class="n">language</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">common</span>                      <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">documentation</span><span class="p">,</span> <span class="n">examples</span> <span class="ow">and</span> <span class="n">common</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">fpm</span>                         <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">server</span><span class="o">-</span><span class="n">side</span><span class="p">,</span> <span class="n">HTML</span><span class="o">-</span><span class="n">embedded</span> <span class="n">scripting</span> <span class="n">language</span> <span class="p">(</span><span class="n">FPM</span><span class="o">-</span><span class="n">CGI</span> <span class="n">binary</span><span class="p">)</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">json</span>                        <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">JSON</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">opcache</span>                     <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">Zend</span> <span class="n">OpCache</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">readline</span>                    <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">readline</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove php</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">autoremove</span> <span class="o">--</span><span class="n">purge</span> <span class="n">php</span><span class="o">-</span><span class="n">common</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*php*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apparmor</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">abstractions</span><span class="o">/</span><span class="n">php5</span>
+<span class="n">rm</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span> <span class="o">-</span><span class="n">rf</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="install-remove-other">
+<h3>2.2.2.7. install&amp;remove other<a class="headerlink" href="#install-remove-other" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><ul>
+<li><p class="first">install</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">apt</span> <span class="n">install</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*curl*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">curl</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">fpm</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">curl</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">cli</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">curl</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*php7.0-curl*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*curl*&quot;</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">curl</span>                        <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">CURL</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*mbstring*&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mbstring</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">fpm</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">mbstring</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">cli</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">mbstring</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*mbstring*&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">mbstring</span><span class="o">.</span><span class="n">so</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span><span class="o">/</span><span class="n">mbstring</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span><span class="o">/</span><span class="n">mbstring</span><span class="o">/</span><span class="n">mbstring</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*mbstring*&quot;</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mbstring</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mbstring</span>                    <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">MBSTRING</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libapache2</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">enabled</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mf">0.</span><span class="n">load</span>
+    <span class="n">LoadModule</span> <span class="n">php7_module</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">modules</span><span class="o">/</span><span class="n">libphp7</span><span class="o">.</span><span class="mf">0.</span><span class="n">so</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*libapache2*&quot;</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*libapache2*&quot;</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">lib</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*libapache2*&quot;</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">libapache2</span>
+    <span class="n">ii</span>  <span class="n">libapache2</span><span class="o">-</span><span class="n">mod</span><span class="o">-</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span>              <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">server</span><span class="o">-</span><span class="n">side</span><span class="p">,</span> <span class="n">HTML</span><span class="o">-</span><span class="n">embedded</span> <span class="n">scripting</span> <span class="n">language</span> <span class="p">(</span><span class="n">Apache</span> <span class="mi">2</span> <span class="n">module</span><span class="p">)</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*gd.ini&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">apache2</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">gd</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">gd</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">fpm</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">gd</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">cli</span><span class="o">/</span><span class="n">conf</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="mi">20</span><span class="o">-</span><span class="n">gd</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">usr</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;*gd&quot;</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">sbin</span><span class="o">/</span><span class="n">rsyslogd</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">bug</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">locale</span><span class="o">/</span><span class="n">gd</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">lintian</span><span class="o">/</span><span class="n">overrides</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span><span class="o">/</span><span class="n">gd</span>
+<span class="n">ls</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">gd</span><span class="o">*</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">gd</span><span class="o">.</span><span class="n">so</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">gd</span>                          <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">GD</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mysql</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">ls</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">mysql</span><span class="o">*</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">mysqli</span><span class="o">.</span><span class="n">so</span>  <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">mysqlnd</span><span class="o">.</span><span class="n">so</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;mysql*.ini&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mysqli</span><span class="o">.</span><span class="n">ini</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mysqlnd</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mysql</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mysql</span>                       <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">MySQL</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">php</span><span class="o">-</span><span class="n">redis</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">ls</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">redis</span><span class="o">*</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">so</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;redis*.ini&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">redis</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">php</span><span class="o">-</span><span class="n">redis</span>
+    <span class="n">ii</span>  <span class="n">php</span><span class="o">-</span><span class="n">redis</span>                          <span class="mf">2.2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="mi">389</span><span class="o">-</span><span class="n">g2887ad1</span><span class="o">+</span><span class="mf">2.2</span><span class="o">.</span><span class="mi">7</span><span class="o">-</span><span class="mi">1</span>                 <span class="n">amd64</span>        <span class="n">PHP</span> <span class="n">extension</span> <span class="k">for</span> <span class="n">interfacing</span> <span class="k">with</span> <span class="n">Redis</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">mcrypt</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">apt</span> <span class="n">install</span> <span class="n">libmcrypt</span><span class="o">-</span><span class="n">dev</span> <span class="o">-</span><span class="n">y</span>
+
+<span class="n">apt</span> <span class="n">install</span> <span class="n">php</span><span class="o">-</span><span class="n">mcrypt</span> <span class="o">-</span><span class="n">y</span>
+<span class="n">ls</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">mcrypt</span><span class="o">*</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mi">20151012</span><span class="o">/</span><span class="n">mcrypt</span><span class="o">.</span><span class="n">so</span>
+<span class="n">find</span> <span class="o">/</span><span class="n">etc</span> <span class="o">-</span><span class="n">name</span> <span class="s2">&quot;mcrypt*.ini&quot;</span>
+    <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">php</span><span class="o">/</span><span class="mf">7.0</span><span class="o">/</span><span class="n">mods</span><span class="o">-</span><span class="n">available</span><span class="o">/</span><span class="n">mcrypt</span><span class="o">.</span><span class="n">ini</span>
+<span class="n">dpkg</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">mcrypt</span> <span class="o">|</span> <span class="n">grep</span> <span class="s2">&quot;php&quot;</span>
+    <span class="n">ii</span>  <span class="n">php</span><span class="o">-</span><span class="n">mcrypt</span>                         <span class="mi">1</span><span class="p">:</span><span class="mf">7.0</span><span class="o">+</span><span class="mi">35</span><span class="n">ubuntu6</span>                            <span class="nb">all</span>          <span class="n">libmcrypt</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span> <span class="p">[</span><span class="n">default</span><span class="p">]</span>
+    <span class="n">ii</span>  <span class="n">php7</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">mcrypt</span>                      <span class="mf">7.0</span><span class="o">.</span><span class="mi">22</span><span class="o">-</span><span class="mi">0</span><span class="n">ubuntu0</span><span class="o">.</span><span class="mf">16.04</span><span class="o">.</span><span class="mi">1</span>                    <span class="n">amd64</span>        <span class="n">libmcrypt</span> <span class="n">module</span> <span class="k">for</span> <span class="n">PHP</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">remove</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>先删除依赖mysql，apache的包，mcrypt和libmcrypt-dev是系统包，不删除
+apt autoremove --purge libapache2-mod-php7.0 -y
+ls /etc/apache2/mods-enabled/php*
+dpkg -l | grep libapache2
+ls /usr/lib/apache2/modules/libphp7.0.so
+执行命令均未发现残余
+apt autoremove --purge php7.0-mysql -y
+执行命令均未发现残余
+删除php
+apt autoremove --purge php-common -y
+ls /usr/lib/php
+    ls: cannot access &#39;/usr/lib/php&#39;: No such file or directory
+find /etc -name &quot;*php*&quot;
+    /etc/php
+    /etc/apparmor.d/abstractions/php5
+rm /etc/php -rf
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">以上软件是基于SPI系统测试，运行在ubuntu16.04上!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shell.html" class="btn btn-neutral float-right" title="2.3. shell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="point.html" class="btn btn-neutral" title="2.1. point" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, cxl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

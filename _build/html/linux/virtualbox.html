@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.4. virtualbox &mdash; cxl schedule 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cxl schedule 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="2. LINUX" href="index.html"/>
+        <link rel="next" title="2.5. supervisor" href="supervisor.html"/>
+        <link rel="prev" title="2.3. shell" href="shell.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cxl schedule
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. introduce</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. LINUX</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="point.html">2.1. point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apt.html">2.2. apt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">2.3. shell</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.4. virtualbox</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#install">2.4.1. install</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example">2.4.2. example</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="supervisor.html">2.5. supervisor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../program/index.html">3. PROGRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">4. PROJECT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versionCtrl/index.html">5. VERSION CONTROL</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cxl schedule</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">2. LINUX</a> &raquo;</li>
+        
+      <li>2.4. virtualbox</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/linux/virtualbox.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="virtualbox">
+<h1>2.4. virtualbox<a class="headerlink" href="#virtualbox" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install">
+<h2>2.4.1. install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<div class="line-block">
+<div class="line">1、编辑source.list添加如下内容deb <a class="reference external" href="http://download.virtualbox.org/virtualbox/debian">http://download.virtualbox.org/virtualbox/debian</a> trusty contrib</div>
+<div class="line">2、wget -q <a class="reference external" href="https://www.virtualbox.org/download/oracle_vbox_2016.asc">https://www.virtualbox.org/download/oracle_vbox_2016.asc</a> -O- | sudo apt-key add -</div>
+<div class="line">3、wget -q <a class="reference external" href="https://www.virtualbox.org/download/oracle_vbox.asc">https://www.virtualbox.org/download/oracle_vbox.asc</a> -O- | sudo apt-key add -</div>
+<div class="line">4、apt-get update</div>
+<div class="line">5、apt-get install virtualbox-5.1</div>
+<div class="line">6、wget <a class="reference external" href="http://download.virtualbox.org/virtualbox/5.1.0/Oracle_VM_VirtualBox_Extension_Pack-5.1.0-108711.vbox-extpack">http://download.virtualbox.org/virtualbox/5.1.0/Oracle_VM_VirtualBox_Extension_Pack-5.1.0-108711.vbox-extpack</a> 下载扩展</div>
+<div class="line">7、vboxmanage extpack install Oracle_VM_VirtualBox_Extension_Pack-5.1.0-108711.vbox-extpack 安装扩展</div>
+<div class="line">8、vboxmanage list ostypes 查看支持的虚拟机类型</div>
+<div class="line">9、vboxmanage list vms 查看已存在的虚拟机</div>
+</div>
+</div>
+<div class="section" id="example">
+<h2>2.4.2. example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">create vm</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>vboxmanage createvm --name &quot;ubuntu1204-base&quot; --ostype &quot;Ubuntu_64&quot; --basefolder &quot;/home/cxl/virtualbox/vm/&quot; --register 创建虚拟机
+vboxmanage createhd --filename /home/cxl/virtualbox/vm/ubuntu1204-base/ubuntu1204-base --size 8000 创建虚拟硬盘
+vboxmanage storagectl &quot;ubuntu1204-base&quot; --add ide  --name &quot;IDE Controller&quot; --bootable on  创建ide接口
+vboxmanage storageattach &quot;ubuntu1204-base&quot; --storagectl &quot;IDE Controller&quot; --port 0 --device 0 --type hdd --medium &quot;/home/cxl/virtualbox/vm/ubuntu1204-base/ubuntu1204-base.vdi&quot; 虚拟机关联硬盘
+vboxmanage storageattach &quot;ubuntu1204-base&quot; --storagectl &quot;IDE Controller&quot; --port 1 --device 0 --type dvddrive --medium &quot;/home/cxl/virtualbox/iso/ubuntu-12.04.1-server-amd64.iso&quot; 虚拟机关联光驱，加入iso安装文件
+vboxmanage modifyvm &quot;ubuntu1204-base&quot; --vrde on --vrdeport 5001
+vboxmanage startvm &quot;buildserver&quot; --type headless
+</pre></div>
+</div>
+</li>
+<li><p class="first">delete vm</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vboxmanage</span> <span class="n">unregistervm</span> <span class="n">ubuntu1204</span><span class="o">-</span><span class="n">base</span> <span class="o">--</span><span class="n">delete</span> <span class="n">删除虚拟机</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">clone vm</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">vboxmanage</span> <span class="n">clonevm</span> <span class="s2">&quot;ubuntu1204-base&quot;</span> <span class="o">--</span><span class="n">name</span> <span class="s2">&quot;buildserver&quot;</span> <span class="o">--</span><span class="n">register</span> <span class="o">--</span><span class="n">basefolder</span> <span class="s2">&quot;/home/cxl/virtualbox/vm-root/&quot;</span>
+<span class="n">vboxmanage</span> <span class="n">startvm</span> <span class="s2">&quot;buildserver&quot;</span> <span class="o">--</span><span class="nb">type</span> <span class="n">headless</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="supervisor.html" class="btn btn-neutral float-right" title="2.5. supervisor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="shell.html" class="btn btn-neutral" title="2.3. shell" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, cxl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

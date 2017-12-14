@@ -1,0 +1,563 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.1. php &mdash; cxl schedule 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cxl schedule 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="3. PROGRAM" href="index.html"/>
+        <link rel="next" title="3.2. shell" href="shell.html"/>
+        <link rel="prev" title="3. PROGRAM" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cxl schedule
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. introduce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">2. LINUX</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. PROGRAM</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. php</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#php7">3.1.1. php7功能点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tp5">3.1.2. tp5</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#queue">3.1.2.1. queue</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">3.2. shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">3.3. mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vue.html">3.4. vue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="redis.html">3.5. redis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">4. PROJECT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versionCtrl/index.html">5. VERSION CONTROL</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cxl schedule</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">3. PROGRAM</a> &raquo;</li>
+        
+      <li>3.1. php</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/program/php.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="php">
+<h1>3.1. php<a class="headerlink" href="#php" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="php7">
+<h2>3.1.1. php7功能点<a class="headerlink" href="#php7" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p class="first">花括号 {}</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1. 表示{}里面的是一个变量  ,执行时按照变量来处理
+2. 在字符串中引用变量使用的特殊包括方式，这样就可以不使用.运算符，从而减少代码的输入量了。
+$s = &quot;Di, &quot;;
+echo (&quot;${s}omething&quot;);  == echo $s.&quot;omething&quot;;
+//Output: Di, omething
+
+PHP 变量后面加上一个大括号{}，里面填上数字，就是指 PHP 变量相应序号的字符。
+例如：
+$str = &#39;hello&#39;;
+echo $str{0}; // 输出为 h
+echo $str{1}; // 输出为 e
+如果要检查某个字符串是否满足多少长度，可以考虑用这种大括号（花括号）加 isset 的方式替代 strlen 函数，因为 isset 是语言结构，strlen 是函数，所以使用 isset 比使用 strlen 效率更高。
+比如判断一个字符串的长度是否小于 5：
+if ( !isset ( $str{5} ) ) 就比 if ( strlen ( $str ) &lt; 5 ) 好。
+</pre></div>
+</div>
+</li>
+<li><p class="first">call_user_func &amp; call_user_func_array</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>区别 调用方式不同
+    call_user_func(array($class,$method),param1,param2);
+    call_user_func_array(array($class,$method),array(param1,param2));
+注意如果上面$class为字符串,$method为非静态方法，则必须要先实例化，比如 $class = new \app\class;
+</pre></div>
+</div>
+</li>
+<li><p class="first">method_exists &amp; is_callable</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>调用方式不同，is_callable
+    if ( is_callable( array( $obj, $method ) ) )
+    {
+    /*要操作的代码段*/
+    }
+    method_exists($obj,$method)
+    $result = is_callable([&#39;\app\sms\model\NoDisturbNumber&#39;,&#39;clearData&#39;]);
+    dump($result);
+    $result = method_exists(&#39;appsms\model\NoDisturbNumber&#39;, &quot;clearData&quot;);
+    dump($result);
+其他
+    php函数method_exists()与is_callable()的区别在于在php5中，一个方法存在并不意味着它就可以被调用。对于 private，protected和public类型的方法，method_exits()会返回true，但是is_callable()会检查存在其是否可以访问，如果是private，protected类型的，它会返回false。
+</pre></div>
+</div>
+</li>
+<li><p class="first">trait</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>属性：如果 trait 定义了一个属性，那类将不能定义同样名称的属性，否则会产生一个错误。
+如果类的定义是兼容的（同样的可见性和初始值）则错误的级别是 E_STRICT，否则是一个致命错误。
+</pre></div>
+</div>
+</li>
+<li><p class="first">php7新功能</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1、运算符（NULL 合并运算符）
+    $a = $_GET[&#39;a&#39;] ?? 1; 相当于 $a = isset($_GET[&#39;a&#39;]) ? $_GET[&#39;a&#39;] : 1;
+2、函数返回值类型声明
+  # declare(strict_types=1);
+    function foo($a):int{
+        return $a
+    }
+    foo(1.0); foo 函数返回 int 1，没有任何错误
+    去掉上面代码的注释，采用严格模式，则会出发一个 TypeError 的 Fatal error。
+3、标量类型声明
+    function sumOfints(int ...$ints){
+        return array_sum($ints)
+    }
+    var_dump(sumOfInts(2, &#39;3&#39;, 4.1));
+4、use 批量声明
+    use some/namespace/{ClassA, ClassB, ClassC as C};
+    use function some/namespace/{fn_a, fn_b, fn_c};
+    use const some/namespace/{ConstA, ConstB, ConstC};
+5、spaceship（&lt;=&gt;）操作符
+    用来比较两个表达式，左边小于、等于、大于右边时分别返回-1,0,1
+6、常量array可以使用define定义
+    define(&#39;ANIMALS&#39;, [
+&#39;dog&#39;,
+&#39;cat&#39;,
+&#39;bird&#39;
+    ]);
+    echo ANIMALS[1]; // outputs &quot;cat&quot;
+7、匿名类
+    interface Logger {
+public function log(string $msg);
+    }
+    class Application {
+        private $logger;
+
+        public function getLogger(): Logger {
+             return $this-&gt;logger;
+        }
+
+        public function setLogger(Logger $logger) {
+             $this-&gt;logger = $logger;
+        }
+    }
+    $app = new Application;
+    $app-&gt;setLogger(new class implements Logger {
+        public function log(string $msg) {
+            echo $msg;
+        }
+    });
+    var_dump($app-&gt;getLogger());
+    The above example will output:
+    object(class@anonymous)#2 (0) {
+    }
+8、闭包（ Closure）增加了一个 call 方法
+    class A {private $x = 1;}
+    // Pre PHP 7 code
+    $getX = function() {return $this-&gt;x;};
+    $getXCB = $getX-&gt;bindTo(new A, &#39;A&#39;); // intermediate closure
+    echo $getXCB();
+
+    // PHP 7+ code
+    $getX = function() {return $this-&gt;x;};
+    echo $getX-&gt;call(new A);
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+<div class="section" id="tp5">
+<h2>3.1.2. tp5<a class="headerlink" href="#tp5" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="queue">
+<h3>3.1.2.1. queue<a class="headerlink" href="#queue" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">refer</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">coolseven</span><span class="o">/</span><span class="n">notes</span><span class="o">/</span><span class="n">blob</span><span class="o">/</span><span class="n">master</span><span class="o">/</span><span class="n">thinkphp</span><span class="o">-</span><span class="n">queue</span><span class="o">/</span><span class="n">README</span><span class="o">.</span><span class="n">md</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">install</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">composer</span> <span class="n">require</span> <span class="n">topthink</span><span class="o">/</span><span class="n">think</span><span class="o">-</span><span class="n">queue</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">例子</p>
+<blockquote>
+<div><ul>
+<li><p class="first">配置</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>application/extra/queue.php
+return [
+        &#39;connector&#39;  =&gt; &#39;Redis&#39;,         // Redis 驱动
+        &#39;expire&#39;     =&gt; 60,             // 任务的过期时间，默认为60秒; 若要禁用，则设置为 null
+        &#39;default&#39;    =&gt; &#39;default&#39;,      // 默认的队列名称
+        &#39;host&#39;       =&gt; &#39;127.0.0.1&#39;,        // redis 主机ip
+        &#39;port&#39;       =&gt; 6379,           // redis 端口
+        &#39;password&#39;   =&gt; &#39;&#39;,             // redis 密码
+        &#39;select&#39;     =&gt; 2,                  // 使用哪一个 db，默认为 db1
+        &#39;timeout&#39;    =&gt; 0,              // redis连接的超时时间
+        &#39;persistent&#39; =&gt; false,          // 是否是长连接
+];
+</pre></div>
+</div>
+</li>
+<li><p class="first">建立生产者</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>public function test(){
+    // 1.当前任务将由哪个类来负责处理。
+    //   当轮到该任务时，系统将生成一个该类的实例，并调用其 fire 方法
+    $jobHandlerClassName  = &#39;app\job\Import&#39;;
+    // 2.当前任务归属的队列名称，如果为新队列，会自动创建
+    $jobQueueName     = &quot;importQueue&quot;;
+    // 3.当前任务所需的业务数据 . 不能为 resource 类型，其他类型最终将转化为json形式的字符串
+    //   ( jobData 为对象时，需要在先在此处手动序列化，否则只存储其public属性的键值对)
+    $jobData          = [ &#39;ts&#39; =&gt; time(), &#39;bizId&#39; =&gt; uniqid() , &#39;a&#39; =&gt; 1 ] ;
+    // 4.将该任务推送到消息队列，等待对应的消费者去执行
+    $isPushed = Queue::push( $jobHandlerClassName , $jobData , $jobQueueName );
+    // database 驱动时，返回值为 1|false  ;   redis 驱动时，返回值为 随机字符串|false
+    if( $isPushed !== false ){
+        echo date(&#39;Y-m-d H:i:s&#39;) . &quot; a new Hello Job is Pushed to the MQ [$isPushed]&quot;.&quot;&lt;br&gt;&quot;;
+    }else{
+        echo &#39;Oops, something went wrong.&#39;;
+    }
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">查看queue</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">llen</span> <span class="s2">&quot;queues:helloJobQueue&quot;</span> <span class="n">长度</span>
+<span class="n">lpop</span> <span class="s2">&quot;queues:helloJobQueue&quot;</span> <span class="n">出栈</span>
+<span class="n">lrange</span> <span class="s2">&quot;queues:helloJobQueue&quot;</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span> <span class="n">查询队列内容</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">建立消费者</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>namespace app\job;
+use think\queue\Job;
+use think\Log;
+
+class Import{
+
+    /**
+     * fire方法是消息队列默认调用的方法
+     * @param Job            $job      当前的任务对象
+     * @param array|mixed    $data     发布任务时自定义的数据
+     */
+    public function fire(Job $job,$data){
+        $isJobDone = $this-&gt;doHelloJob($data);
+
+        if ($isJobDone) {
+            //如果任务执行成功， 记得删除任务
+            $job-&gt;delete();
+            print(&quot;&lt;info&gt;Hello Job has been done and deleted&quot;.&quot;&lt;/info&gt;\n&quot;);
+        }else{
+            if ($job-&gt;attempts() &gt; 3) {
+                //通过这个方法可以检查这个任务已经重试了几次了
+                print(&quot;&lt;warn&gt;Hello Job has been retried more than 3 times!&quot;.&quot;&lt;/warn&gt;\n&quot;);
+                $job-&gt;delete();
+                // 也可以重新发布这个任务
+                //print(&quot;&lt;info&gt;Hello Job will be availabe again after 2s.&quot;.&quot;&lt;/info&gt;\n&quot;);
+                //$job-&gt;release(2); //$delay为延迟时间，表示该任务延迟2秒后再执行
+            }
+        }
+    }
+
+    /**
+     * 根据消息中的数据进行实际的业务处理
+     * @param array|mixed    $data     发布任务时自定义的数据
+     * @return boolean                 任务执行的结果
+     */
+    private function doHelloJob($data) {
+        // 根据消息中的数据进行实际的业务处理...
+        print(&quot;&lt;info&gt;Hello Job Started. job Data is: &quot;.var_export($data,true).&quot;&lt;/info&gt; \n&quot;);
+        print(&quot;&lt;info&gt;Hello Job is Fired at &quot; . date(&#39;Y-m-d H:i:s&#39;) .&quot;&lt;/info&gt; \n&quot;);
+        print(&quot;&lt;info&gt;Hello Job is Done!&quot;.&quot;&lt;/info&gt; \n&quot;);
+        return true;
+    }
+
+    public function failed($data){
+
+        // ...任务达到最大重试次数后，失败了
+        print(&quot;&lt;info&gt;Hello Job is failed!&quot;.&quot;&lt;/info&gt; \n&quot;);
+        Log::write(&quot;has fail in import:&quot;);
+    }
+}
+</pre></div>
+</div>
+</li>
+<li><p class="first">全局错误类</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1. tags.php 标签配置
+// 任务失败统一回调,有四种定义方式
+&#39;queue_failed&#39;=&gt; [
+            [&#39;app\\common\\behavior\\MyQueueFailedLogger&#39;, &#39;logAllFailedQueues&#39;]
+        ],
+2. fail方法
+    namespace app\common\behavior;
+    use think\Log;
+    class MyQueueFailedLogger{
+        const should_run_hook_callback = true;
+
+        /**
+         * @param $jobObject   \think\queue\Job   //任务对象，保存了该任务的执行情况和业务数据
+         * @return bool     true                  //是否需要删除任务并触发其failed() 方法
+         */
+        public function logAllFailedQueues(&amp;$jobObject){
+
+            /* $failedJobLog = [
+                    &#39;jobHandlerClassName&#39;   =&gt; $jobObject-&gt;getName(), // &#39;application\index\job\Hello&#39;
+                    &#39;queueName&#39; =&gt; $jobObject-&gt;getQueue(),             // &#39;helloJobQueue&#39;
+                    &#39;jobData&#39;   =&gt; $jobObject-&gt;getRawBody()[&#39;data&#39;],  // &#39;{&#39;a&#39;: 1 }&#39;
+                    &#39;attempts&#39;  =&gt; $jobObject-&gt;attempts(),            // 3
+            ];
+            var_export(json_encode($failedJobLog,true)); */
+            Log::write(&quot;i am in failed method&quot;);
+            //Log::write(&quot;failed in &quot;.json_encode($failedJobLog,true));
+            // $jobObject-&gt;release();     //重发任务
+            //$jobObject-&gt;delete();         //删除任务
+            //$jobObject-&gt;failed();   //通知消费者类任务执行失败
+
+            return self::should_run_hook_callback;
+        }
+    }
+</pre></div>
+</div>
+</li>
+<li><p class="first">测试</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="mf">10.0</span><span class="o">.</span><span class="mf">0.42</span><span class="p">:</span><span class="mi">1066</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">index</span><span class="o">/</span><span class="n">test</span>
+    <span class="mi">2017</span><span class="o">-</span><span class="mi">09</span><span class="o">-</span><span class="mi">23</span> <span class="mi">10</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">18</span> <span class="n">a</span> <span class="n">new</span> <span class="n">Hello</span> <span class="n">Job</span> <span class="ow">is</span> <span class="n">Pushed</span> <span class="n">to</span> <span class="n">the</span> <span class="n">MQ</span> <span class="p">[</span><span class="n">A25ZVpTcRIDUMyUgwSiRy76ebkLPuck8</span><span class="p">]</span>
+<span class="mf">2.</span> <span class="n">php</span> <span class="n">think</span> <span class="n">queue</span><span class="p">:</span><span class="n">work</span> <span class="o">--</span><span class="n">queue</span><span class="o">=</span><span class="s2">&quot;importQueue&quot;</span> <span class="o">--</span><span class="n">daemon</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">使用supervisor管理进程</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>[program:import]
+directory=/home/cxl/git-svn/spi/spi-php
+command=php think queue:work --queue=&quot;importQueue&quot; --tries=1 --daemon
+process_name=import_%(process_num)s
+numprocs=2
+numprocs_start=1
+autostart=true
+startsecs=5
+autorestart=true
+startretries=3
+user=www-data
+;redirect_stderr=true
+;stdout_logfile_maxbytes = 20MB
+;stdout_logfile_backups = 20
+;stdout_logfile = /data/logs/usercenter_stdout.log
+;environment=PYTHONPATH=$PYTHONPATH:/path/to/somewhere
+导入队列，使用两个进程处理，循环处理
+kill一个进程会自动重启
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="shell.html" class="btn btn-neutral float-right" title="3.2. shell" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="3. PROGRAM" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, cxl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

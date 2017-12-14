@@ -1,0 +1,729 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3.5. redis &mdash; cxl schedule 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cxl schedule 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="3. PROGRAM" href="index.html"/>
+        <link rel="next" title="4. PROJECT" href="../project/index.html"/>
+        <link rel="prev" title="3.4. vue" href="vue.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cxl schedule
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. introduce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">2. LINUX</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. PROGRAM</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="php.html">3.1. php</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shell.html">3.2. shell</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mysql.html">3.3. mysql</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vue.html">3.4. vue</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.5. redis</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#refer">3.5.1. refer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-research">3.5.2. install&amp;research</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">3.5.2.1. 安装</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">3.5.2.2. 配置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">3.5.2.3. 测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">3.5.2.4. 代码示例</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#usage">3.5.3. usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">4. PROJECT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versionCtrl/index.html">5. VERSION CONTROL</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cxl schedule</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">3. PROGRAM</a> &raquo;</li>
+        
+      <li>3.5. redis</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/program/redis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="redis">
+<h1>3.5. redis<a class="headerlink" href="#redis" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="refer">
+<h2>3.5.1. refer<a class="headerlink" href="#refer" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><a class="reference external" href="http://doc.redisfans.com/">http://doc.redisfans.com/</a>
+<a class="reference external" href="http://www.redis.net.cn/tutorial/3501.html">http://www.redis.net.cn/tutorial/3501.html</a>
+<a class="reference external" href="http://www.cnblogs.com/liuconglin/p/5847568.html">http://www.cnblogs.com/liuconglin/p/5847568.html</a>
+这是一篇讲各种数据类型的应用场景的文章，可做参考：<a class="reference external" href="http://blog.csdn.net/gaogaoshan/article/details/41039581/">http://blog.csdn.net/gaogaoshan/article/details/41039581/</a>
+redislive 是一款redis使用状态的软件 具体可参考：<a class="reference external" href="http://blog.csdn.net/hz_blog/article/details/41822825">http://blog.csdn.net/hz_blog/article/details/41822825</a>
+这篇文章讲了此工具如何安装 具体不做说明 地址：<a class="reference external" href="http://www.cnblogs.com/hepingqingfeng/p/6107809.html">http://www.cnblogs.com/hepingqingfeng/p/6107809.html</a></div></blockquote>
+</div>
+<div class="section" id="install-research">
+<h2>3.5.2. install&amp;research<a class="headerlink" href="#install-research" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>3.5.2.1. 安装<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="line-block">
+<div class="line">$ wget <a class="reference external" href="http://download.redis.io/releases/redis-3.2.6.tar.gz">http://download.redis.io/releases/redis-3.2.6.tar.gz</a></div>
+<div class="line">$ tar xzf redis-3.2.6.tar.gz</div>
+<div class="line">$ cd redis-3.2.6</div>
+<div class="line">$ make</div>
+<div class="line">$ src/redis-server 运行redis服务</div>
+<div class="line">$ src/redis-cli</div>
+<div class="line">redis&gt; set foo bar</div>
+<div class="line">OK</div>
+<div class="line">redis&gt; get foo</div>
+<div class="line">“bar”</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>3.5.2.2. 配置<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">redis配置</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>vi redis.conf
+bind 10.0.0.23
+daemonize yes
+logfile &quot;/var/pbx/tmp/Logs/redis/redis_6379.log&quot;
+dbfilename dump_6379.rdb
+//生产环境
+rename-command FLUSHALL &quot;&quot;
+rename-command FLUSHDB &quot;&quot;
+rename-command KEYS &quot;&quot;
+rename-command CONFIG &quot;&quot;
+maxmemory 2gb //占用的最大内存 &lt;span style=&#39;color:green;font-weight:bold;&#39;&gt;&lt;一般推荐Redis设置内存为最大物理内存的四分之三,设置最大内存后一般需设置过期策略&gt;&lt;/span&gt;
+appendonly yes
+appendfilename &quot;appendonly_6379.aof&quot;
+requirepass &quot;prettydogKnockTheDoor&quot; //需要密码才能访问
+将redis加入到系统自启动的脚本中
+
+Redis使用超过设置的最大值
+打开debug模式下的页面，提示错误：OOM command not allowed when used memory &gt; ‘maxmemory’.
+设置了maxmemory的选项，redis内存使用达到上限。可以通过设置LRU算法来删除部分key，释放空间。默认是按照过期时间的,如果set时候没有加上过期时间就会导致数据写满maxmemory。
+如果不设置maxmemory或者设置为0，64位系统不限制内存，32位系统最多使用3GB内存。
+
+LRU是Least Recently Used 近期最少使用算法。
+volatile-lru -&gt; 根据LRU算法生成的过期时间来删除。
+allkeys-lru -&gt; 根据LRU算法删除任何key。
+volatile-random -&gt; 根据过期设置来随机删除key。
+allkeys-&gt;random -&gt; 无差别随机删。
+volatile-ttl -&gt; 根据最近过期时间来删除（辅以TTL）
+noeviction -&gt; 谁也不删，直接在写操作时返回错误。
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">详细配置可参考文章：<cite>这篇文章主要讲的是配置的含义和优化 &lt;http://www.tuicool.com/articles/MvMBf2&gt;</cite></p>
+</div>
+<ul>
+<li><p class="first">iptable配置</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>考虑到安全，不允许外网用户访问redis
+
+10.0.0.0/24 表示C类地址 24掩码前面的0
+iptables -A INPUT ! -s 10.0.0.0/24 -p tcp --dport 6379 -j DROP //拒绝所有非本网段的机器访问redis
+iptables -A INPUT ! -s 10.0.0.0/24 -p udp --dport 6379 -j DROP
+保存iptables规则下次启动时自动启动规则
+iptables-save &gt; /etc/iptables.up.rules //保存规则
+vi /etc/network/interfaces
+pre-up iptables-restore &lt; /etc/iptables.up.rules  //恢复规则
+iptables -F
+重启网络
+/etc/init.d/networking restart
+iptables -L -v
+重启机器
+iptables -L -v
+可以看到刚刚配置的规则都在
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>3.5.2.3. 测试<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">redis数据类型测试</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>设置值，获取值
+* set foo &quot;bar&quot;
+* get foo
+* expire foo 120
+* ttl foo 查询过期时间 返回-2值不存在 -1 值永不过期
+
+自增变量
+set connections 10
+incr connections
+del connections
+
+list 队列
+rpush friends &quot;alice&quot; 添加到队尾
+rpush friends &quot;bob&quot;
+lpush friends &quot;sam&quot; 添加到队首
+lrange friends 0 -1 获取全部队列
+lrange friends 0 1 获取0-1
+llen friends 队列长度
+lpop friends 弹出首个对象
+rpop friends 弹出队尾对象
+
+set 与list相似，但没有顺序且对象只能出现一次
+sadd superpowers &quot;flight&quot;   添加值
+sadd superpowers &quot;x-ray vision&quot;
+sadd superpowers &quot;reflexes&quot;
+srem superpowers &quot;reflexes&quot;  删除值
+sismember superpowers &quot;reflexes&quot;  判断是否存在0不存在1存在
+smembers superpowers
+sadd birdpowers &quot;flight&quot;
+sadd birdpowers &quot;pecking&quot;
+sunion superpowers birdpowers 合并set
+
+sorted set 可排序set
+zadd hackers 1940 &quot;alan key&quot;
+zadd hackers 1980 &quot;Grace hopper&quot;
+zadd hackers 1945 &quot;richard stallman&quot;
+zadd hackers 1944 &quot;macker&quot;
+zrange hackers 0 -1
+
+hashes
+hset user:1000 name &quot;john smith&quot;
+hset user:1000 email &quot;john.smith@example.com&quot;
+hset user:1000 password &quot;s3cret&quot;
+hgetall user:1000
+HMSET user:1001 name &quot;Mary Jones&quot; password &quot;hidden&quot; email &quot;mjones@example.com&quot;
+SET user:1000 visits 10
+HINCRBY user:1000 visits 1 加1
+hdel user:1000 visits 删除值
+</pre></div>
+</div>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><cite>测试参考文档 &lt;http://www.cnblogs.com/silent2012/p/4514901.html&gt;</cite></p>
+</div>
+<ul>
+<li><p class="first">安全测试</p>
+<blockquote>
+<div><ul>
+<li><p class="first">只有使用密码才能访问</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@1604developer</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="c1"># telnet 10.0.0.23 6379</span>
+<span class="n">Trying</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.23</span><span class="o">...</span>
+<span class="n">telnet</span><span class="p">:</span> <span class="n">Unable</span> <span class="n">to</span> <span class="n">connect</span> <span class="n">to</span> <span class="n">remote</span> <span class="n">host</span><span class="p">:</span> <span class="n">Connection</span> <span class="n">refused</span>
+<span class="n">root</span><span class="nd">@1604developer</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="c1"># telnet 10.0.0.23 6379</span>
+<span class="n">Trying</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.23</span><span class="o">...</span>
+<span class="n">Connected</span> <span class="n">to</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">0.23</span><span class="o">.</span>
+<span class="n">Escape</span> <span class="n">character</span> <span class="ow">is</span> <span class="s1">&#39;^]&#39;</span><span class="o">.</span>
+<span class="n">auth</span> <span class="n">prettydogKnockTheDoor</span>
+<span class="o">+</span><span class="n">OK</span>
+<span class="n">keys</span> <span class="o">*</span>
+<span class="o">*</span><span class="mi">0</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">指定ip才能访问</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>iptables -L -v --line-num
+配置iptables只允许10.0.0.1-32的ip地址访问redis
+iptables -A INPUT ! -s 10.0.0.0/27 -p tcp --dport 6379 -j DROP
+iptables -A INPUT ! -s 10.0.0.0/27 -p udp --dport 6379 -j DROP
+在本机访问
+root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# telnet 10.0.0.23 6379
+Trying 10.0.0.23...
+Connected to 10.0.0.23.
+Escape character is &#39;^]&#39;.
+auth prettydogKnockTheDoor
++OK
+keys *
+*0
+在10.0.0.237机器访问
+root@php1 16:51:00:~# telnet 10.0.0.23 6379
+Trying 10.0.0.23...
+如果策略修改为
+iptables -A INPUT ! -s 10.0.0.0/27 -p tcp --dport 6379 -j REJECT
+iptables -A INPUT ! -s 10.0.0.0/27 -p udp --dport 6379 -j REJECT
+再次在10.0.0.237机器访问
+root@php1 16:53:23:~# telnet 10.0.0.23 6379
+Trying 10.0.0.23...
+telnet: Unable to connect to remote host: Connection refused
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">数据恢复测试</p>
+<blockquote>
+<div><ul>
+<li><p class="first">kill redis 进程</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# src/redis-cli -h 10.0.0.23
+10.0.0.23:6379&gt; auth prettydogKnockTheDoor
+OK
+10.0.0.23:6379&gt; set &quot;first Key&quot; &quot;first Value&quot;
+OK
+10.0.0.23:6379&gt; get &quot;first Key&quot;
+&quot;first Value&quot;
+10.0.0.23:6379&gt; quit
+root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# ps -aux |grep redis
+Warning: bad ps syntax, perhaps a bogus &#39;-&#39;? See http://procps.sf.net/faq.html
+root      4418  0.1  0.3  36124  1564 ?        Ssl  17:54   0:00 src/redis-server 10.0.0.23:6379
+root      4497  0.0  0.1   9380   936 pts/2    S+   17:57   0:00 grep --color=auto redis
+root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# kill 4418
+root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# src/redis-server redis.conf
+root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# src/redis-cli -h 10.0.0.23
+10.0.0.23:6379&gt; auth prettydogKnockTheDoor
+OK
+10.0.0.23:6379&gt; get &quot;first Key&quot;
+&quot;first Value&quot;
+10.0.0.23:6379&gt; quit
+</pre></div>
+</div>
+</li>
+<li><p class="first">重启redis进程，查看redis数据</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@ubuntu1204base</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="c1"># reboot</span>
+<span class="n">root</span><span class="nd">@ubuntu1204base</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="c1"># src/redis-server redis.conf</span>
+<span class="n">root</span><span class="nd">@ubuntu1204base</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="c1"># src/redis-cli -h 10.0.0.23</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.23</span><span class="p">:</span><span class="mi">6379</span><span class="o">&gt;</span> <span class="n">auth</span> <span class="n">prettydogKnockTheDoor</span>
+<span class="n">OK</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.23</span><span class="p">:</span><span class="mi">6379</span><span class="o">&gt;</span> <span class="n">get</span> <span class="s2">&quot;first Key&quot;</span>
+<span class="s2">&quot;first Value&quot;</span>
+<span class="mf">10.0</span><span class="o">.</span><span class="mf">0.23</span><span class="p">:</span><span class="mi">6379</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+<li><p class="first">性能测试</p>
+<blockquote>
+<div><ul>
+<li><p class="first">内存占用测试</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>vi redis.conf
+maxmemory 1m //为了测试方便设置为1mb
+vi addKey.sh
+# !/usr/bin/bash
+
+echo &quot;AUTH prettydogKnockTheDoor&quot;
+sleep 1
+
+outstr=&quot;&quot;
+value10=&quot;1&quot;
+j=700
+while [ $j -gt 690 ]
+do
+for i in {100..199}
+do
+outstr=&quot;${outstr}set key$j-$i ${value10}\r\n&quot;
+done
+printf &quot;$outstr&quot;
+outstr=&quot;&quot;
+j=`expr $j - 1`
+done
+这个脚本往redis服务器加入1000个key，其中Key值10个字节，value值一个字节
+
+10.0.0.23:6379&gt; flushall //清空redis
+10.0.0.23:6379&gt; info
+# Memory
+used_memory:821552
+used_memory_human:803.70K
+看出来，redis初始状态就占用803.70k，所以设置1m最大内存，实际可用应该是200k左右
+运行脚本插入1000个键值
+
+&gt;方式1
+./addkey.sh | nc 10.0.0.23 6379
+
+&gt;方式2
+./addkey.sh | ../redis-3.2.6/src/redis-cli -h 10.0.0.23 -a prettydogKnockTheDoor --pipe
+All data transferred. Waiting for the last reply...
+Last reply received from server.
+errors: 0, replies: 100001
+
+
+10.0.0.23:6379&gt; info
+# Memory
+used_memory:871184
+used_memory_human:850.77K
+
+占用内存47k，所以11字节的key+value大概占用47字节的内存空间
+修改一下脚本加入4000key
+-OOM command not allowed when used memory &gt; &#39;maxmemory&#39;.
+10.0.0.23:6379&gt; dbsize
+(integer) 3109
+只加入了3109键值
+used_memory:980120
+used_memory_human:957.15K
+</pre></div>
+</div>
+</li>
+<li><p class="first">大并发测试</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>50个客户端发送100000请求每个请求3个字节，看起来redis很给力
+root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# src/redis-benchmark -h 10.0.0.23 -q （&lt;span style=&#39;color:red;font-weight:bold&#39;&gt;本机测试&lt;/span&gt;）
+PING_INLINE: 75131.48 requests per second
+PING_BULK: 74074.07 requests per second
+SET: 76277.65 requests per second
+GET: 74349.44 requests per second
+INCR: 75815.01 requests per second
+LPUSH: 74074.07 requests per second
+RPUSH: 73421.44 requests per second
+LPOP: 74794.31 requests per second
+RPOP: 74571.22 requests per second
+SADD: 74906.37 requests per second
+SPOP: 74794.31 requests per second
+LPUSH (needed to benchmark LRANGE): 73367.57 requests per second
+LRANGE_100 (first 100 elements): 72621.64 requests per second
+LRANGE_300 (first 300 elements): 74515.65 requests per second
+LRANGE_500 (first 450 elements): 74019.25 requests per second
+LRANGE_600 (first 600 elements): 76277.65 requests per second
+MSET (10 keys): 73746.31 requests per second
+
+&lt;span style=&#39;color:red;font-weight:bold&#39;&gt;内网跨服务器测试&lt;/span&gt;
+PING_INLINE: 13596.19 requests per second
+PING_BULK: 13696.75 requests per second
+SET: 13676.15 requests per second
+GET: 13738.15 requests per second
+INCR: 13738.15 requests per second
+LPUSH: 13664.94 requests per second
+RPUSH: 13585.11 requests per second
+LPOP: 13730.61 requests per second
+RPOP: 13719.30 requests per second
+SADD: 13702.38 requests per second
+SPOP: 13691.13 requests per second
+LPUSH (needed to benchmark LRANGE): 13655.61 requests per second
+LRANGE_100 (first 100 elements): 13650.01 requests per second
+LRANGE_300 (first 300 elements): 13648.15 requests per second
+LRANGE_500 (first 450 elements): 13550.14 requests per second
+LRANGE_600 (first 600 elements): 13674.28 requests per second
+MSET (10 keys): 13220.52 requests per second
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>结论：本机访问是内网跨服务器访问各类请求每秒执行数量五倍多</p>
+<ul class="last">
+<li><p class="first">监控性能</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="n">top监控</span>
+ <span class="n">root</span><span class="nd">@ubuntu1204base</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="c1">#  top -b -p 16417 -n 2|egrep &quot;16417|PID&quot;|tail -2</span>
+ <span class="n">PID</span> <span class="n">USER</span>      <span class="n">PR</span>  <span class="n">NI</span>  <span class="n">VIRT</span>  <span class="n">RES</span>  <span class="n">SHR</span> <span class="n">S</span> <span class="o">%</span><span class="n">CPU</span> <span class="o">%</span><span class="n">MEM</span>    <span class="n">TIME</span><span class="o">+</span>  <span class="n">COMMAND</span>
+ <span class="mi">16417</span> <span class="n">root</span>      <span class="mi">20</span>   <span class="mi">0</span> <span class="mi">42268</span> <span class="mi">8980</span> <span class="mi">1240</span> <span class="n">S</span>  <span class="mf">0.0</span>  <span class="mf">1.8</span>   <span class="mi">0</span><span class="p">:</span><span class="mf">02.70</span> <span class="n">redis</span><span class="o">-</span><span class="n">server</span>
+
+<span class="o">&gt;&gt;</span><span class="n">redis</span><span class="o">-</span><span class="n">cli</span> <span class="n">info监控</span>
+
+ <span class="n">root</span><span class="nd">@ubuntu1204base</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="c1"># src/redis-cli -h 10.0.0.23 -a prettydogKnockTheDoor info|grep used_memory</span>
+ <span class="n">used_memory</span><span class="p">:</span><span class="mi">7470144</span>
+ <span class="n">used_memory_human</span><span class="p">:</span><span class="mf">7.12</span><span class="n">M</span>
+ <span class="n">used_memory_rss</span><span class="p">:</span><span class="mi">9023488</span>
+ <span class="n">used_memory_rss_human</span><span class="p">:</span><span class="mf">8.61</span><span class="n">M</span>
+ <span class="n">used_memory_peak</span><span class="p">:</span><span class="mi">7470144</span>
+ <span class="n">used_memory_peak_human</span><span class="p">:</span><span class="mf">7.12</span><span class="n">M</span>
+ <span class="n">used_memory_lua</span><span class="p">:</span><span class="mi">37888</span>
+ <span class="n">used_memory_lua_human</span><span class="p">:</span><span class="mf">37.00</span><span class="n">K</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="id4">
+<h3>3.5.2.4. 代码示例<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">predis</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>好处是不需要安装php扩展，直接require就行了
+git clone git://github.com/nrk/predis.git
+wget https://github.com/nrk/predis/archive/v1.1.1.tar.gz
+拷贝到Thinkphp vendor目录下
+
+示例代码
+&lt;pre&gt;
+       require_once VENDOR_PATH.&quot;predis/autoload.php&quot;;
+       try {
+           $redis = new Predis\Client(&quot;redis://127.0.0.1:6379/&quot;);
+           $redis-&gt;set(&#39;library&#39;, &#39;predis1&#39;);
+           $retval = $redis-&gt;get(&#39;library1&#39;);
+           var_export($retval);
+       } catch (Exception $e) {
+           var_dump($e-&gt;getMessage());
+       }
+
+&lt;/pre&gt;
+
+predis函数集：http://www.open-open.com/lib/view/open1355830836135.html
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="usage">
+<h2>3.5.3. usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">key</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>1、help set
+SET key value [EX seconds] [PX milliseconds] [NX|XX]
+summary: Set the string value of a key
+since: 1.0.0
+group: string
+
+set test 10
+set test 10 EX 60 60秒过期
+</pre></div>
+</div>
+</li>
+<li><dl class="first docutils">
+<dt>list</dt>
+<dd><ol class="first last arabic simple">
+<li><dl class="first docutils">
+<dt>查询list</dt>
+<dd>lrange queues:importQueue 0 -1</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>从队列头pop元素，在队列里删除该元素</dt>
+<dd>lpop queues:importQueue</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>清空队列</dt>
+<dd>ltrim queues:importQueue 1 0</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>set</dt>
+<dd><ul class="first last">
+<li><p class="first">zset（sorted set）操作相关</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">查询</span>
+    <span class="n">zrange</span> <span class="n">queues</span><span class="p">:</span><span class="n">importQueue</span><span class="p">:</span><span class="n">reserved</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>
+<span class="mf">2.</span> <span class="n">删除所有元素</span>
+    <span class="n">zrem</span> <span class="n">queues</span><span class="p">:</span><span class="n">importQueue</span><span class="p">:</span><span class="n">reserved</span> <span class="mi">0</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">hash</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="mf">1.</span> <span class="n">查看hash中的值和value</span>
+    <span class="n">hgetall</span> <span class="n">job_result</span>
+    <span class="mi">1</span><span class="p">)</span> <span class="s2">&quot;importQueue_p0yzx4AQEcVefgUnvZ9nLLiUprwP6ff5&quot;</span>
+    <span class="mi">2</span><span class="p">)</span> <span class="s2">&quot;{</span><span class="se">\&quot;</span><span class="s2">job_status</span><span class="se">\&quot;</span><span class="s2">:1}&quot;</span>
+<span class="mf">2.</span> <span class="n">删除值</span>
+    <span class="n">hDel</span> <span class="n">job_result</span> <span class="n">importQueue_p0yzx4AQEcVefgUnvZ9nLLiUprwP6ff5</span>
+    <span class="p">(</span><span class="n">integer</span><span class="p">)</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../project/index.html" class="btn btn-neutral float-right" title="4. PROJECT" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="vue.html" class="btn btn-neutral" title="3.4. vue" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, cxl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

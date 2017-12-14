@@ -1,0 +1,878 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.3. shell &mdash; cxl schedule 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cxl schedule 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="2. LINUX" href="index.html"/>
+        <link rel="next" title="2.4. virtualbox" href="virtualbox.html"/>
+        <link rel="prev" title="2.2. apt" href="apt.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cxl schedule
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. introduce</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">2. LINUX</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="point.html">2.1. point</a></li>
+<li class="toctree-l2"><a class="reference internal" href="apt.html">2.2. apt</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.3. shell</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.3.1. shell语法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.3.2. shell参数处理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#awk">2.3.3. awk</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">2.3.3.1. example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#curl">2.3.4. curl</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#usage">2.3.4.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#cut">2.3.5. cut</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id3">2.3.5.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#find">2.3.6. find</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#grep">2.3.7. grep</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">2.3.7.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#jq">2.3.8. jq</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install">2.3.8.1. install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.3.8.2. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mktemp">2.3.9. mktemp</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.3.9.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#nano">2.3.10. nano</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">2.3.10.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#sed">2.3.11. sed</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id8">2.3.11.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#service">2.3.12. service</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id9">2.3.12.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tr">2.3.13. tr</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">2.3.13.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#uname">2.3.14. uname</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id11">2.3.14.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#update-rc-d">2.3.15. update-rc.d</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id12">2.3.15.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#vi">2.3.16. vi</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id13">2.3.16.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#xargs">2.3.17. xargs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id14">2.3.17.1. usage</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">2.3.18. 环境变量</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#refer">2.3.18.1. refer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id16">2.3.18.2. usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="virtualbox.html">2.4. virtualbox</a></li>
+<li class="toctree-l2"><a class="reference internal" href="supervisor.html">2.5. supervisor</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../program/index.html">3. PROGRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">4. PROJECT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versionCtrl/index.html">5. VERSION CONTROL</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cxl schedule</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">2. LINUX</a> &raquo;</li>
+        
+      <li>2.3. shell</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/linux/shell.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="shell">
+<h1>2.3. shell<a class="headerlink" href="#shell" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="id1">
+<h2>2.3.1. shell语法<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">空函数</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">init</span><span class="p">(){</span> <span class="p">:;</span> <span class="p">}</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">case</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>case &quot;$optname&quot; in
+   &quot;a&quot;)
+       # apache 发布端口
+      apache_publish_port=$OPTARG
+       ;;
+    *)
+           exit
+           ;;
+esac
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h2>2.3.2. shell参数处理<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p class="first">refer</p>
+<blockquote>
+<div><p><a class="reference external" href="http://www.jb51.net/article/48686.htm">http://www.jb51.net/article/48686.htm</a></p>
+</div></blockquote>
+</li>
+<li><p class="first">处理方式</p>
+<blockquote>
+<div><p>例如：./test.sh -f config.conf -v –prefix=/home</p>
+<ul>
+<li><p class="first">手工处理</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>* $0 ： ./test.sh,即命令本身，相当于c/c++中的argv[0]
+* $1 ： -f,第一个参数.
+* $2 ： config.conf
+* $3, $4 ... ：类推。
+* $#  参数的个数，不包括命令本身，上例中$#为4.
+* $@ ：参数本身的列表，也不包括命令本身，如上例为 -f config.conf -v --prefix=/home
+* $* ：和$@相同，但&quot;$*&quot; 和 &quot;$@&quot;(加引号)并不同，&quot;$*&quot;将所有的参数解释成一个字符串，而&quot;$@&quot;是一个参数数组。
+#!/bin/bash
+for arg in &quot;$*&quot;
+do
+  echo $arg
+done
+for arg in &quot;$@&quot;
+do
+ echo $arg
+done
+</pre></div>
+</div>
+</li>
+<li><p class="first">getopts</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>不支持长选项
+#!/bin/bash
+while getopts &quot;a:bc&quot; arg #选项后面的冒号表示该选项需要参数
+do
+        case $arg in
+             a)
+                echo &quot;a&#39;s arg:$optarg&quot; #参数存在$optarg中
+
+             b)
+                echo &quot;b&quot;
+
+             c)
+                echo &quot;c&quot;
+
+             ?)  #当有不认识的选项的时候arg为?
+            echo &quot;unkonw argument&quot;
+        exit 1
+
+        esac
+done
+</pre></div>
+</div>
+</li>
+<li><p class="first">getopt</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>要点:
+1. getopt 用法
+语法：getopt [options] [--] optstring parameters
+例如：getopt ab:cd -a -b he free cat
+输出：-a -b he -- free cat
+            getopt 根据 ab:cd 将选项和参数 -a -b he free cat  解析为如下格式：
+            -a -b he -- free cat
+             其中 -- 将选项与非选项参数分开 free 和 cat 就时非选项参数
+2. set --
+-- Do not change any of the flags; useful in setting $1 to -.
+set --  主要是影响特殊变量$1 $2 等，其实在上面的脚本中就是将$1 $2 等参数变量重新组合
+例如：
+set -- a b c
+shell中的特殊位置变量$1 为a $2 为 b $3 为 c
+3.如上脚本为build.sh 用法如下：
+./build.sh -a -c -d -e dog
+./build.sh -acde  dog
+上面两个命令执行结果相同。
+</pre></div>
+</div>
+</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</div>
+<div class="section" id="awk">
+<h2>2.3.3. awk<a class="headerlink" href="#awk" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="example">
+<h3>2.3.3.1. example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">遍历文件相加</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;1</span><span class="se">\n</span><span class="s2">2</span><span class="se">\n</span><span class="s2">3</span><span class="se">\n</span><span class="s2">4&quot;</span> <span class="o">&gt;</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">awk</span> <span class="s1">&#39;{ sum += $1 }; END { print sum }&#39;</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="mi">10</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">按：分割，打印所有用户名</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">awk</span> <span class="o">-</span><span class="n">F</span><span class="p">:</span> <span class="s1">&#39;{ print $1 }&#39;</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">passwd</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">读取配置文件,并输出到变量里</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>echo -e &quot;DB_PWD=123456\nDB_USER=root&quot; &gt; test.txt
+cat test.txt |sed &quot;s#//# #g&quot; | sed &quot;s/=/ /g&quot; | awk  &#39;{if(NF&gt;1){printf(&quot;%s=\&quot;%s\&quot;;&quot;,$1,$2)}}&#39;
+DB_PWD=&quot;123456&quot;;DB_USER=&quot;root&quot;;
+eval $(cat test.txt |sed &quot;s#//# #g&quot; | sed &quot;s/=/ /g&quot; | awk  &#39;{if(NF&gt;1){printf(&quot;%s=\&quot;%s\&quot;;&quot;,$1,$2)}}&#39;)
+echo $DB_PWD
+123456
+</pre></div>
+</div>
+</li>
+<li><p class="first">分析url</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>param=`echo &quot;$redirectUrl&quot; | awk -F &#39;?&#39; &#39;{print $2}&#39;`;
+echo &quot;$param&quot; | awk -F &#39;&amp;&#39; &#39;{i=1;while(i&lt;=NF){n=split($i,array,&quot;=&quot;);if(array[1]==&quot;code&quot;){print array[2];break;};i++;}}&#39;
+</pre></div>
+</div>
+</li>
+<li><p class="first">分析php配置文件，找出session节host配置项</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">awk</span> <span class="o">-</span><span class="n">F</span> <span class="s1">&#39;=&gt;&#39;</span> <span class="s1">&#39;{if($0~/</span><span class="se">\047</span><span class="s1">session</span><span class="se">\047</span><span class="s1">/){find=1;fl=0;fr=0}if(find){if($0~/\[/){fl++;};if($0~/\]/){fr++;};if($1~/</span><span class="se">\047</span><span class="s1">host</span><span class="se">\047</span><span class="s1">/){print $2;exit 0;}if(fl==fr){exit 99}}}&#39;</span> <span class="o">../</span><span class="n">application</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">php</span> <span class="o">|</span> <span class="n">awk</span> <span class="o">-</span><span class="n">F</span> <span class="s1">&#39;</span><span class="se">\047</span><span class="s1">&#39;</span> <span class="s1">&#39;{print $2,exit 0}&#39;</span>
+<span class="s1">&#39;127.0.0.1&#39;</span><span class="p">,</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="curl">
+<h2>2.3.4. curl<a class="headerlink" href="#curl" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="usage">
+<h3>2.3.4.1. usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">静默方式-s，-k不检查证实 -c 创建cookie文件</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>result=`curl -s -k -c cxl_cookie https://10.0.0.42:1066`
+ echo $result
+{&quot;status&quot;:0,&quot;info&quot;:&quot;调用接口成功&quot;,&quot;data&quot;:&quot;home&quot;}
+</pre></div>
+</div>
+</li>
+<li><p class="first">通过使用 -v 和 -trace获取更多的链接信息</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span>  <span class="o">-</span><span class="n">v</span>  <span class="o">-</span><span class="n">k</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;&quot;</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;&quot;</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;&quot;</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="mf">10.0</span><span class="o">.</span><span class="mf">0.42</span><span class="p">:</span><span class="mi">1066</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印返回的header（-i）</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">curl</span>  <span class="o">-</span><span class="n">i</span>  <span class="o">-</span><span class="n">k</span> <span class="o">-</span><span class="n">c</span> <span class="s2">&quot;&quot;</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;&quot;</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;&quot;</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="mf">10.0</span><span class="o">.</span><span class="mf">0.42</span><span class="p">:</span><span class="mi">1066</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="cut">
+<h2>2.3.5. cut<a class="headerlink" href="#cut" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>2.3.5.1. usage<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">按字节剪切</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;test&quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">--</span><span class="n">b</span> <span class="mi">2</span><span class="o">-</span><span class="mi">4</span>
+<span class="n">est</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">按字符剪切</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;test&quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">c</span> <span class="mi">2</span><span class="o">-</span><span class="mi">4</span>
+<span class="n">est</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">多个分段用逗号分开</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;test test&quot;</span><span class="o">|</span><span class="n">cut</span> <span class="o">-</span><span class="n">b</span> <span class="mi">3</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">8</span>
+<span class="n">st</span> <span class="n">s</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">从文件获取</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="o">-</span><span class="n">e</span> <span class="s2">&quot;星期一</span><span class="se">\n</span><span class="s2">星期二</span><span class="se">\n</span><span class="s2">星期三&quot;</span> <span class="o">&gt;</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cut</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">星</span>
+<span class="n">星</span>
+<span class="n">星</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">中文</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;星期四 星期三&quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">c</span> <span class="mi">1</span><span class="o">-</span><span class="mi">3</span>
+<span class="n">星</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">按特殊字符分割</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;root:test:ok&quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="p">:</span> <span class="o">-</span><span class="n">f</span> <span class="mi">1</span>
+<span class="n">root</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">综合应用</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;root:test:ok&quot;</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">d</span> <span class="p">:</span> <span class="o">-</span><span class="n">f</span> <span class="mi">3</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">c</span> <span class="mi">1</span>
+<span class="n">o</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="find">
+<h2>2.3.6. find<a class="headerlink" href="#find" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="grep">
+<h2>2.3.7. grep<a class="headerlink" href="#grep" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id4">
+<h3>2.3.7.1. usage<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">去不命中的行</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">crontab</span> <span class="o">-</span><span class="n">l</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="s2">&quot;php &quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">添加crontab</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">crontab</span> <span class="o">-</span><span class="n">l</span> <span class="mi">2</span><span class="o">&gt;/</span><span class="n">dev</span><span class="o">/</span><span class="n">null</span> <span class="o">|</span> <span class="n">grep</span> <span class="o">-</span><span class="n">v</span> <span class="s2">&quot;php.*cleanAccesstoken&quot;</span><span class="p">;</span><span class="n">echo</span> <span class="s2">&quot;* 1 * * * php /home/cxl/git-svn/spi-php/think cleanAccesstoken&quot;</span><span class="p">)</span> <span class="o">|</span> <span class="n">crontab</span> <span class="o">-</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="jq">
+<h2>2.3.8. jq<a class="headerlink" href="#jq" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="install">
+<h3>2.3.8.1. install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
+<p>apt install jq -y</p>
+</div>
+<div class="section" id="id5">
+<h3>2.3.8.2. usage<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">get value</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;{&quot;status&quot;:0,&quot;info&quot;:&quot;we are success&quot;,&quot;data&quot;:{&quot;client&quot;:{&quot;client_id&quot;:&quot;123456&quot;,&quot;client_secret&quot;:&quot;567890&quot;}}}&#39;</span> <span class="o">|</span> <span class="n">jq</span> <span class="s2">&quot;.status&quot;</span>
+<span class="mi">0</span>
+<span class="n">echo</span> <span class="s1">&#39;{&quot;status&quot;:0,&quot;info&quot;:&quot;we are success&quot;,&quot;data&quot;:{&quot;client&quot;:{&quot;client_id&quot;:&quot;123456&quot;,&quot;client_secret&quot;:&quot;567890&quot;}}}&#39;</span> <span class="o">|</span> <span class="n">jq</span> <span class="s2">&quot;.info&quot;</span> <span class="o">|</span> <span class="n">sed</span> <span class="s1">&#39;s/&quot;//g&#39;</span>
+<span class="n">we</span> <span class="n">are</span> <span class="n">success</span>
+<span class="n">echo</span> <span class="s1">&#39;{&quot;status&quot;:0,&quot;info&quot;:&quot;we are success&quot;,&quot;data&quot;:{&quot;client&quot;:{&quot;client_id&quot;:&quot;123456&quot;,&quot;client_secret&quot;:&quot;567890&quot;}}}&#39;</span> <span class="o">|</span> <span class="n">jq</span> <span class="s2">&quot;.data.client.client_id&quot;</span> <span class="o">|</span> <span class="n">sed</span> <span class="s1">&#39;s/&quot;//g&#39;</span>
+<span class="mi">123456</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">filter data</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s1">&#39;{&quot;status&quot;:0,&quot;info&quot;:&quot;we are success&quot;,&quot;data&quot;:{&quot;client&quot;:{&quot;client_id&quot;:&quot;123456&quot;,&quot;client_secret&quot;:&quot;567890&quot;}}}&#39;</span> <span class="o">|</span> <span class="n">jq</span> <span class="s1">&#39;.data|.client&#39;</span>
+<span class="p">{</span>
+  <span class="s2">&quot;client_id&quot;</span><span class="p">:</span> <span class="s2">&quot;123456&quot;</span><span class="p">,</span>
+  <span class="s2">&quot;client_secret&quot;</span><span class="p">:</span> <span class="s2">&quot;567890&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="mktemp">
+<h2>2.3.9. mktemp<a class="headerlink" href="#mktemp" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id6">
+<h3>2.3.9.1. usage<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">生成随机文件</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mktemp</span> <span class="n">ttXXXX</span><span class="o">.</span><span class="n">tmp</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">生成随机目录</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">mktemp</span> <span class="o">-</span><span class="n">d</span> <span class="n">tempXXXXXX</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="nano">
+<h2>2.3.10. nano<a class="headerlink" href="#nano" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id7">
+<h3>2.3.10.1. usage<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="sed">
+<h2>2.3.11. sed<a class="headerlink" href="#sed" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id8">
+<h3>2.3.11.1. usage<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">替换字符</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;this ReplaceWord success&quot;</span> <span class="o">|</span> <span class="n">sed</span> <span class="s2">&quot;s/ReplaceWord/is/&quot;</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">success</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">替换文件</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;this ReplaceWord success&quot;</span> <span class="o">&gt;</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cat</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">sed</span> <span class="o">-</span><span class="n">i</span> <span class="s2">&quot;s/ReplaceWord/is/&quot;</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+<span class="n">cat</span> <span class="n">test</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">使用正则</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;this 1234 success&quot;</span> <span class="o">|</span> <span class="n">sed</span> <span class="o">-</span><span class="n">r</span> <span class="s2">&quot;s/[0-9]+/is/&quot;</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">success</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">-g表示所有匹配的都执行</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;this 1234 success 1234&quot;</span> <span class="o">|</span> <span class="n">sed</span> <span class="o">-</span><span class="n">r</span> <span class="s2">&quot;s/[0-9]+/is/g&quot;</span>
+<span class="n">this</span> <span class="ow">is</span> <span class="n">success</span> <span class="ow">is</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">按行号删除文件内容</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>sed -i &#39;1,50000d&#39; &quot;$cxl_log_file&quot; # 删除50000万行
+sed -i &#39;1d&#39; a.txt删首行
+sed -i &#39;$d&#39; b.txt删尾行
+sed -i &#39;s/[ ]*//g&#39; c.txt删空格
+sed -i &#39;/^$/d&#39; d.txt删空行
+sed -i ‘/^[0-9]*$/d&#39; a.txt删包含数字的行
+sed -i ‘1,2d’a.txt删2行
+sed -i ‘/love/d’ a.txt删包含string的行
+</pre></div>
+</div>
+</li>
+<li><p class="first">修改制定行内容</p>
+<blockquote>
+<div><p>sed -r  ‘s/( <em>‘host’ *).</em>/1”test”/’  ../application/config.php</p>
+</div></blockquote>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="service">
+<h2>2.3.12. service<a class="headerlink" href="#service" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id9">
+<h3>2.3.12.1. usage<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>service –status-all</li>
+<li>service supervisor status</li>
+</ul>
+</div>
+</div>
+<div class="section" id="tr">
+<h2>2.3.13. tr<a class="headerlink" href="#tr" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id10">
+<h3>2.3.13.1. usage<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">转换为大写</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;hello world&quot;</span> <span class="o">|</span> <span class="n">tr</span> <span class="p">[:</span><span class="n">lower</span><span class="p">:]</span> <span class="p">[:</span><span class="n">upper</span><span class="p">:]</span>
+<span class="n">HELLO</span> <span class="n">WORLD</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">删除空格、数字和-号</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;hello-123-world  empty&quot;</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">d</span> <span class="s1">&#39;[:blank:][:digit:]-&#39;</span>
+<span class="n">helloworldempty</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">删除补级以外的字符，和上一例子正相反</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;hello - 123-world  empty&quot;</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">d</span> <span class="o">-</span><span class="n">c</span> <span class="s1">&#39;[:blank:][:digit:]-&#39;</span>
+<span class="o">-</span> <span class="mi">123</span><span class="o">-</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">去掉连续重复字符</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;helloooo oooo    isssso ookk&quot;</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot; os&quot;</span>
+<span class="n">hello</span> <span class="n">o</span> <span class="n">iso</span> <span class="n">okk</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">删除window文件造成^M字符</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="n">file</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">s</span> <span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="n">new_file</span>
+<span class="n">cat</span> <span class="n">file</span> <span class="o">|</span> <span class="n">tr</span> <span class="o">-</span><span class="n">d</span> <span class="s2">&quot;</span><span class="se">\r</span><span class="s2">&quot;</span> <span class="o">&gt;</span> <span class="n">new_file</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="uname">
+<h2>2.3.14. uname<a class="headerlink" href="#uname" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id11">
+<h3>2.3.14.1. usage<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">打印全部</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">Linux</span> <span class="mi">1604</span><span class="n">developer</span> <span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">89</span><span class="o">-</span><span class="n">generic</span> <span class="c1">#112-Ubuntu SMP Mon Jul 31 19:38:41 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印kernel-name</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">s</span>
+<span class="n">Linux</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印机器网络名</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">n</span>
+<span class="mi">1604</span><span class="n">developer</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印kernel-release</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">r</span>
+<span class="mf">4.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">89</span><span class="o">-</span><span class="n">generic</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印kernel-version</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">v</span>
+<span class="c1">#112-Ubuntu SMP Mon Jul 31 19:38:41 UTC 2017</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印机器硬件名称</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">m</span>
+<span class="n">x86_64</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印处理器类型</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">p</span>
+<span class="n">x86_64</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印硬件平台</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">i</span>
+<span class="n">x86_64</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">打印操作系统</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">uname</span> <span class="o">-</span><span class="n">o</span>
+<span class="n">GNU</span><span class="o">/</span><span class="n">Linux</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="update-rc-d">
+<h2>2.3.15. update-rc.d<a class="headerlink" href="#update-rc-d" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id12">
+<h3>2.3.15.1. usage<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p class="first">添加启动项</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span>   <span class="n">apache2</span> <span class="n">defaults</span>
+<span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span>   <span class="n">nginx</span> <span class="n">defaults</span>
+<span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span>   <span class="n">redis_6379</span> <span class="n">defaults</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">删除启动项</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span> <span class="o">-</span><span class="n">f</span> <span class="n">apache2</span> <span class="n">remove</span>
+<span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span> <span class="o">-</span><span class="n">f</span> <span class="n">nginx</span> <span class="n">remove</span>
+<span class="n">sudo</span> <span class="n">update</span><span class="o">-</span><span class="n">rc</span><span class="o">.</span><span class="n">d</span> <span class="o">-</span><span class="n">f</span> <span class="n">redis_6379</span> <span class="n">remove</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="vi">
+<h2>2.3.16. vi<a class="headerlink" href="#vi" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id13">
+<h3>2.3.16.1. usage<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>翻下页ctrl+f</li>
+<li>翻上页ctrl+b</li>
+<li>设置行号 set nu</li>
+</ul>
+</div>
+</div>
+<div class="section" id="xargs">
+<h2>2.3.17. xargs<a class="headerlink" href="#xargs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id14">
+<h3>2.3.17.1. usage<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">当你尝试用rm 删除太多的文件，你可能得到一个错误信息：/bin/rm Argument list too long. 用xargs 去避免这个问题</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>find ~ -name ‘*.log&#39; -print0 | xargs -0 rm -f
+</pre></div>
+</div>
+</li>
+<li><p class="first">获得/etc/ 下所有*.conf 结尾的文件列表，有几种不同的方法能得到相同的结果，下面的例子仅仅是示范怎么实用xargs ，在这个例子中实用 xargs将find 命令的输出传递给ls -l</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>find /etc -name &quot;*.conf&quot; | xargs ls –l
+</pre></div>
+</div>
+</li>
+<li><p class="first">假如你有一个文件包含了很多你希望下载的URL, 你能够使用xargs 下载所有链接</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span>cat url-list.txt | xargs wget –c
+</pre></div>
+</div>
+</li>
+<li><p class="first">查找所有的jpg 文件，并且压缩它</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">find</span> <span class="o">/</span> <span class="o">-</span><span class="n">name</span> <span class="o">*.</span><span class="n">jpg</span> <span class="o">-</span><span class="nb">type</span> <span class="n">f</span> <span class="o">-</span><span class="nb">print</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">tar</span> <span class="o">-</span><span class="n">cvzf</span> <span class="n">images</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">拷贝所有的图片文件到一个外部的硬盘驱动</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">*.</span><span class="n">jpg</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">-</span><span class="n">n1</span> <span class="o">-</span><span class="n">i</span> <span class="n">cp</span> <span class="p">{}</span> <span class="o">/</span><span class="n">external</span><span class="o">-</span><span class="n">hard</span><span class="o">-</span><span class="n">drive</span><span class="o">/</span><span class="n">directory</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">查找另一个目录同名文件，-n1表示每行一个参数 -i表示用{}表示输出的每行记录</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ls</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">svn</span><span class="o">/</span><span class="n">spi</span><span class="o">/</span><span class="n">spi</span><span class="o">-</span><span class="n">php</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">res</span><span class="o">/</span><span class="n">supervisor</span> <span class="o">|</span> <span class="n">xargs</span> <span class="o">-</span><span class="n">n1</span> <span class="o">-</span><span class="n">i</span> <span class="n">echo</span> <span class="p">{}</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="id15">
+<h2>2.3.18. 环境变量<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="refer">
+<h3>2.3.18.1. refer<a class="headerlink" href="#refer" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="http://www.cnblogs.com/zhaofeng555/p/4895517.html">http://www.cnblogs.com/zhaofeng555/p/4895517.html</a></p>
+</div>
+<div class="section" id="id16">
+<h3>2.3.18.2. usage<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
+<p>先将export LANG=zh_CN加入/etc/profile ,退出系统重新登录，登录提示显示英文。将/etc/profile 中的export LANG=zh_CN删除，将LNAG=zh_CN加入/etc/environment，退出系统重新登录，登录提示显示中文。用户环境建立的过程中总是先执行/etc/profile然后在读取/etc/environment。为什么会有如上所叙的不同呢?</p>
+<p>应该是先执行/etc/environment，后执行/etc/profile。
+/etc/environment是设置整个系统的环境，而/etc/profile是设置所有用户的环境，前者与登录用户无关，后者与登录用户有关。  www.2cto.com
+系统应用程序的执行与用户环境可以是无关的，但与系统环境是相关的，所以当你登录时，你看到的提示信息，象日期、时间信息的显示格式与系统环境的LANG是相关的，缺省LANG=en_US，如果系统环境LANG=zh_CN，则提示信息是中文的，否则是英文的。</p>
+<p>对于用户的SHELL初始化而言是先执行/etc/profile,再读取文件/etc/environment.对整个系统而言是先执行/etc/environment。这样理解正确吗?
+/etc/enviroment –&gt; /etc/profile –&gt; $HOME/.profile   –&gt;$HOME/.env (如果存在)</p>
+<p>/etc/profile 是所有用户的环境变量
+/etc/enviroment是系统的环境变量
+登陆系统时shell读取的顺序应该是   www.2cto.com</p>
+<blockquote>
+<div>/etc/profile -&gt;/etc/enviroment –&gt;$HOME/.profile   –&gt;$HOME/.env</div></blockquote>
+<p>原因应该是jtw所说的用户环境和系统环境的区别了
+如果同一个变量在用户环境(/etc/profile)和系统环境(/etc/environment)有不同的值那应该是以用户环境为准了。</p>
+<p>（1）/etc/profile： 此文件为系统的每个用户设置环境信息,当用户第一次登录时,该文件被执行. 并从/etc/profile.d目录的配置文件中搜集shell的设置。</p>
+<p>（2）/etc/bashrc: 为每一个运行bash shell的用户执行此文件.当bash shell被打开时,该文件被读取。  www.2cto.com</p>
+<p>（3）~/.bash_profile: 每个用户都可使用该文件输入专用于自己使用的shell信息,当用户登录时,该文件仅仅执行一次!默认情况下,他设置一些环境变量,执行用户的.bashrc文件。</p>
+<p>（4）~/.bashrc: 该文件包含专用于你的bash shell的bash信息,当登录时以及每次打开新的shell时,该该文件被读取。</p>
+<p>（5） ~/.bash_logout:当每次退出系统(退出bash shell)时,执行该文件. 另外,/etc/profile中设定的变量(全局)的可以作用于任何用户,而~/.bashrc等中设定的变量(局部)只能继承 /etc/profile中的变量,他们是”父子”关系。</p>
+<p>（6）~/.bash_profile 是交互式、login 方式进入 bash 运行的~/.bashrc 是交互式 non-login 方式进入 bash 运行的通常二者设置大致相同，所以通常前者会调用后者。</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="virtualbox.html" class="btn btn-neutral float-right" title="2.4. virtualbox" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="apt.html" class="btn btn-neutral" title="2.2. apt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, cxl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
