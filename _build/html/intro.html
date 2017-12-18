@@ -104,6 +104,7 @@
 <li class="toctree-l1"><a class="reference internal" href="program/index.html">3. PROGRAM</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project/index.html">4. PROJECT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="versionCtrl/index.html">5. VERSION CONTROL</a></li>
+<li class="toctree-l1"><a class="reference internal" href="other/index.html">6. OTHER</a></li>
 </ul>
 
             
@@ -192,7 +193,7 @@ three</li>
 </div></blockquote>
 <ol class="arabic simple">
 <li>one</li>
-<li>two</li>
+<li>two我是一个ingnew</li>
 </ol>
 <blockquote>
 <div><div class="line-block">
@@ -200,15 +201,49 @@ three</li>
 <div class="line">two</div>
 </div>
 </div></blockquote>
+<img alt="_images/c0d.png" src="_images/c0d.png" />
+<table border="1" class="colwidths-given docutils" id="id3">
+<caption><span class="caption-text">Frozen Delights!</span><a class="headerlink" href="#id3" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="27%" />
+<col width="18%" />
+<col width="55%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Treat</th>
+<th class="head">Quantity</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Albatross</td>
+<td>2.99</td>
+<td>On a stick!</td>
+</tr>
+<tr class="row-odd"><td>Crunchy Frog</td>
+<td>1.49</td>
+<td>If we took the bones out, it wouldn’t be
+crunchy, now would it?</td>
+</tr>
+<tr class="row-even"><td>Gannet Ripple</td>
+<td>1.99</td>
+<td>On a stick!</td>
+</tr>
+</tbody>
+</table>
 <div class="section" id="read-the-docs">
 <h2>1.1. read the docs<a class="headerlink" href="#read-the-docs" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="refer">
 <h3>1.1.1. refer<a class="headerlink" href="#refer" title="Permalink to this headline">¶</a></h3>
-<blockquote>
-<div><a class="reference external" href="https://readthedocs.org/">https://readthedocs.org/</a>
-<a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html">http://www.sphinx-doc.org/en/stable/rest.html</a>
-<a class="reference external" href="http://www.jianshu.com/p/78e9e1b8553a">http://www.jianshu.com/p/78e9e1b8553a</a>
-<a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html</a></div></blockquote>
+<div class="admonition seealso">
+<p class="first admonition-title">See also</p>
+<div class="last line-block">
+<div class="line"><a class="reference external" href="https://readthedocs.org/">readthedocs官方网址</a></div>
+<div class="line"><a class="reference external" href="http://www.sphinx-doc.org/en/stable/rest.html">sphinx语法文档</a></div>
+<div class="line"><a class="reference external" href="http://www.jianshu.com/p/78e9e1b8553a">个人博客文档</a></div>
+<div class="line"><a class="reference external" href="https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html">sphinx中文语法文档</a></div>
+</div>
+</div>
 </div>
 <div class="section" id="install">
 <h3>1.1.2. install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h3>
@@ -238,6 +273,8 @@ three</li>
 <li>apt install texlive-latex-extra</li>
 <li>apt install latexmk</li>
 <li>make latexpdf LATEXMKOPTS=”-silent”</li>
+<li>apt install texlive-xetex</li>
+<li>apt install latex-cjk-all</li>
 </ol>
 </div>
 <div class="section" id="usage">
@@ -252,6 +289,18 @@ three</li>
 <span class="n">make</span> <span class="n">html</span>
 </pre></div>
 </div>
+</li>
+<li><dl class="first docutils">
+<dt>conf.py</dt>
+<dd><p class="first">latex_engine=xelatex 解决无法生成pdf问题
+texhash 不知道干啥用的
+‘preamble’: ‘’‘</p>
+<blockquote>
+<div><p>usepackage{xeCJK} 解决无法显示中文的问题</p>
+</div></blockquote>
+<p class="last">‘’‘</p>
+</dd>
+</dl>
 </li>
 </ul>
 </div>

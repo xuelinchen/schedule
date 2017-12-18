@@ -24,22 +24,41 @@ introduce
  * twochild
 
 #. one
-#. two 
+#. two我是一个ingnew
 
   | one
   | two
   
+.. image:: images/c0d.png
 
+.. list-table:: Frozen Delights!
+   :widths: 15 10 30
+   :header-rows: 1
+
+   * - Treat
+     - Quantity
+     - Description
+   * - Albatross
+     - 2.99
+     - On a stick!
+   * - Crunchy Frog
+     - 1.49
+     - If we took the bones out, it wouldn't be
+       crunchy, now would it?
+   * - Gannet Ripple
+     - 1.99
+     - On a stick!
 
 read the docs
 -----------------
 
 refer
 ^^^^^^^^^
-    https://readthedocs.org/
-    http://www.sphinx-doc.org/en/stable/rest.html
-    http://www.jianshu.com/p/78e9e1b8553a
-    https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html
+.. seealso::
+   | `readthedocs官方网址 <https://readthedocs.org/>`_
+   | `sphinx语法文档 <http://www.sphinx-doc.org/en/stable/rest.html>`_
+   | `个人博客文档 <http://www.jianshu.com/p/78e9e1b8553a>`_
+   | `sphinx中文语法文档 <https://zh-sphinx-doc.readthedocs.io/en/latest/contents.html>`_
 
 install
 ^^^^^^^^^^^
@@ -68,6 +87,8 @@ install
 #. apt install texlive-latex-extra
 #. apt install latexmk 
 #. make latexpdf LATEXMKOPTS="-silent"
+#. apt install texlive-xetex
+#. apt install latex-cjk-all
 
 usage 
 ^^^^^^^^^^^^
@@ -80,5 +101,12 @@ usage
     sphinx-quickstart
     make html
 
+* conf.py
+    latex_engine=xelatex 解决无法生成pdf问题
+    texhash 不知道干啥用的
+    'preamble': '''
+        \usepackage{xeCJK} 解决无法显示中文的问题
+    '''
+    
 
     

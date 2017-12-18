@@ -10,4 +10,6 @@ PROGRAM
    mysql
    vue
    redis
+   nodejs
+   javascript
    

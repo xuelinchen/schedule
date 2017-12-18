@@ -115,7 +115,9 @@ html_sidebars = {
 htmlhelp_basename = 'cxlscheduledoc'
 
 
+
 # -- Options for LaTeX output ---------------------------------------------
+latex_engine = 'xelatex'
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
@@ -129,11 +131,17 @@ latex_elements = {
     # Additional stuff for the LaTeX preamble.
     #
     # 'preamble': '',
-
+  
     # Latex figure (float) alignment
     #
     # 'figure_align': 'htbp',
+    
+    'papersize': 'a4paper',
+    'preamble': '''
+        \usepackage{xeCJK}
+    '''
 }
+
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,

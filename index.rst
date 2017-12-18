@@ -16,4 +16,5 @@ Welcome to cxl schedule's documentation!
    program/index.rst
    project/index.rst
    versionCtrl/index.rst
+   other/index.rst
    

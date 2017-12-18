@@ -321,24 +321,25 @@ install&research
 .. note::
     结论：本机访问是内网跨服务器访问各类请求每秒执行数量五倍多
 
-    * 监控性能 ::
+
+* 监控性能 ::
     
-        >>top监控
-         root@ubuntu1204base:/home/cxl/redis/redis-3.2.6#  top -b -p 16417 -n 2|egrep "16417|PID"|tail -2
-         PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                
-         16417 root      20   0 42268 8980 1240 S  0.0  1.8   0:02.70 redis-server  
-        
-        >>redis-cli info监控
-        
-         root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# src/redis-cli -h 10.0.0.23 -a prettydogKnockTheDoor info|grep used_memory
-         used_memory:7470144
-         used_memory_human:7.12M
-         used_memory_rss:9023488
-         used_memory_rss_human:8.61M
-         used_memory_peak:7470144
-         used_memory_peak_human:7.12M
-         used_memory_lua:37888
-         used_memory_lua_human:37.00K
+    >>top监控
+     root@ubuntu1204base:/home/cxl/redis/redis-3.2.6#  top -b -p 16417 -n 2|egrep "16417|PID"|tail -2
+     PID USER      PR  NI  VIRT  RES  SHR S %CPU %MEM    TIME+  COMMAND                                                                
+     16417 root      20   0 42268 8980 1240 S  0.0  1.8   0:02.70 redis-server  
+    
+    >>redis-cli info监控
+    
+     root@ubuntu1204base:/home/cxl/redis/redis-3.2.6# src/redis-cli -h 10.0.0.23 -a prettydogKnockTheDoor info|grep used_memory
+     used_memory:7470144
+     used_memory_human:7.12M
+     used_memory_rss:9023488
+     used_memory_rss_human:8.61M
+     used_memory_peak:7470144
+     used_memory_peak_human:7.12M
+     used_memory_lua:37888
+     used_memory_lua_human:37.00K
 
 代码示例
 ^^^^^^^^^^^^^

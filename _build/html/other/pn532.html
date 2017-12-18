@@ -1,0 +1,296 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>6.1. pn532 &mdash; cxl schedule 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="cxl schedule 1.0.0 documentation" href="../index.html"/>
+        <link rel="up" title="6. OTHER" href="index.html"/>
+        <link rel="prev" title="6. OTHER" href="index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> cxl schedule
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro.html">1. introduce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../linux/index.html">2. LINUX</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../program/index.html">3. PROGRAM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../project/index.html">4. PROJECT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../versionCtrl/index.html">5. VERSION CONTROL</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">6. OTHER</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.1. pn532</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pn532-ic">6.1.1. pn532 破解复制IC电梯门禁卡</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id2">6.1.1.1. 工具/原料</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">6.1.1.2. 方法/步骤</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">cxl schedule</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">6. OTHER</a> &raquo;</li>
+        
+      <li>6.1. pn532</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/other/pn532.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="pn532">
+<h1>6.1. pn532<a class="headerlink" href="#pn532" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="pn532-ic">
+<h2>6.1.1. pn532 破解复制IC电梯门禁卡<a class="headerlink" href="#pn532-ic" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://jingyan.baidu.com/article/63f236284be1290208ab3de1.html">网上地址</a>
+pn532是NXP最近推出的一款NFC芯片，是一种门禁电梯等IC卡读卡器，
+可以读写NFC卡片，比起PM3，arc122等读卡器便宜的多而且很好用，
+【只可用于复制自己的电梯门禁卡，不得用于破解别人的切记】。
+卡片可以通过usb转串口线和电脑连接进行操作过程简单方便</p>
+<div class="section" id="id2">
+<h3>6.1.1.1. 工具/原料<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>pn532卡片一个</li>
+<li>usb转串口线一根</li>
+</ul>
+</div>
+<div class="section" id="id3">
+<h3>6.1.1.2. 方法/步骤<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first">首先要把串口线和pn532连接，方法是黑色线接GND，红色线一般是电源线接VCC,白色线接SDA,
+绿色线接SCL线一定要结对否则会烧板子，串口线和pn532板子上一般都有标识对应接就可以了，
+如果串口线上没有标识可以咨询商家确认</p>
+<p><img alt="imgpn532" src="../_images/pn532.jpg" /></p>
+<p><img alt="imgttl2usb" src="../_images/ttl2usb.jpg" /></p>
+</li>
+<li><p class="first">将卡片和串口线连接好后将usb口插入电脑，卡片灯亮一般是黄灯，再将UID卡片放到PN532上，
+pn532四周的白线上天线。【在此之前记得要安装好pl2302usb转串口驱动，否则不能识别卡片】</p>
+<p><img alt="imgpn532-card" src="../_images/pn532-card.jpg" /></p>
+</li>
+<li><p class="first">打开PN532相应的软件PN532工具XP版http://pan.baidu.com/s/1jI2y4f0这里有软件和驱动自己下载，
+点未发现PN532设备搜寻设备，如果连接成功会弹出发现nxp设备</p>
+<p><img alt="imgpn532-soft1" src="../_images/pn532-soft1.jpg" /></p>
+</li>
+<li><p class="first">现在点破解key a和key b设备开始读取ic卡片信息，如果卡片有加密会自动破解密钥，如果能破解会
+提示读取成功</p>
+<p><img alt="imgpn532-soft2" src="../_images/pn532-soft2.jpg" /></p>
+</li>
+<li><p class="first">找到左侧文字扇区点旁边的灰色三角块保存读取的dump内容，文件名可以任取，后缀是默认的dump后缀</p>
+<p><img alt="imgpn532-soft3" src="../_images/pn532-soft3.jpg" /></p>
+</li>
+<li><p class="first">现在就可以写卡里，把你原卡拿开，放上空卡，记得要先读取卡片，根据你卡片类型选择相应的选项，
+普通IC卡也就是M1卡，和uid卡，卡片读取完成就可以写卡了，最好能写0扇区的UID卡，否则写卡成功
+了也不能用，因为0扇区数据没有写入。点选写UID卡选择你之前保存的dump文件，pn532就开始写入了
+很快写入完成，拿到你家电梯上试试吧，成功！</p>
+<p><img alt="imgpn532-soft4" src="../_images/pn532-soft4.jpg" /></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="6. OTHER" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, cxl.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

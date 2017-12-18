@@ -532,8 +532,9 @@ MSET (10 keys): 13220.52 requests per second
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p>结论：本机访问是内网跨服务器访问各类请求每秒执行数量五倍多</p>
-<ul class="last">
+<p class="last">结论：本机访问是内网跨服务器访问各类请求每秒执行数量五倍多</p>
+</div>
+<ul>
 <li><p class="first">监控性能</p>
 <div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;&gt;</span><span class="n">top监控</span>
  <span class="n">root</span><span class="nd">@ubuntu1204base</span><span class="p">:</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cxl</span><span class="o">/</span><span class="n">redis</span><span class="o">/</span><span class="n">redis</span><span class="o">-</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">6</span><span class="c1">#  top -b -p 16417 -n 2|egrep &quot;16417|PID&quot;|tail -2</span>
@@ -555,7 +556,6 @@ MSET (10 keys): 13220.52 requests per second
 </div>
 </li>
 </ul>
-</div>
 </div>
 <div class="section" id="id4">
 <h3>3.5.2.4. 代码示例<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
